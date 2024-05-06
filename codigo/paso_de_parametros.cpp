@@ -14,15 +14,25 @@ void porPtr(int *n){
 	std::cout << "n en porPtr : " << *n << std::endl;
 }
 
+void porReferencia(int &n){
+	// n se recibe por referencia
+	n*=10;	
+	std::cout << "n en porReferencia : " << n << std::endl;
+}
+
 void pruebasCopiaYPtr(){
 	int n = 100;
 	
 	porCopia(n);
-	std::cout << "n : " << n << std::endl;
+	std::cout << "porcopia n : " << n << std::endl;
 	
 	n = 100;
 	porPtr(&n);
-	std::cout << "n : " << n << std::endl;
+	std::cout << "porptr n : " << n << std::endl;
+	
+	n=100;
+	porReferencia(n);
+	std::cout << "porreferencia n : " << n << std::endl;
 }
 
 int main(){
