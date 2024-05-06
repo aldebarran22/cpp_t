@@ -38,7 +38,7 @@ void sizeVars(){
 }
 
 int main(){
-	//tipoIntChar();
-	sizeVars();
+	tipoIntChar();
+	//sizeVars();
 	return 0;
 }
