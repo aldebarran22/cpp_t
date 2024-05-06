@@ -37,12 +37,30 @@ void pruebasCopiaYPtr(){
 
 void puntero_vs_referencia(){
 	int numero = 100;
+	int numero2 = 200;
 	
 	// No es obligatorio inicializarlo.
 	int *p;
 	
+	p = &numero;
+	*p = 10;
+	
+	p = &numero2;
+	*p = 20;
+	
+	std::cout << "numero: " << numero << " numero2: " << numero2 << std::endl;
+	
+	numero = 100;
+	numero2 = 200;
+	
 	// La ref. es obligatorio inicializarla
-	int &ref;
+	int &ref = numero;
+	
+	ref = 10;
+	ref = numero2;
+	ref = 20;
+	
+	std::cout << "numero: " << numero << " numero2: " << numero2 << std::endl;
 
 }
 
