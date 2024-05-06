@@ -6,7 +6,38 @@ Reservar un array dinamico, rellenar de numeros aleatorios, imprimir, y liberar
 #include <ctime>
 #include <cstdlib>
 
-int main(){
+/*
+reservar()
+
+imprimir()
+
+liberar()*/
+
+void porCopia(int n){
+	// Recibimos una copia de la variable de main
+	n++;
+	std::cout << "n en porCopia : " << n << std::endl;
+}
+
+void porPtr(int *n){
+	// Recibimos la dir. de la variable de main.
+	(*n)++;
+	std::cout << "n en porPtr : " << *n << std::endl;
+}
+
+void pruebasCopiaYPtr(){
+	int n = 100;
+	
+	porCopia(n);
+	std::cout << "n : " << n << std::endl;
+	
+	n = 100;
+	porPtr(&n);
+	std::cout << "n : " << n << std::endl;
+}
+
+void reservaArray(){
+
 	int *ptr = 0;
 	
 	// Inicializar la semilla de numeros aleatorios:
@@ -38,3 +69,11 @@ int main(){
 	ptr = 0;
 	
 }
+
+int main(){
+
+	reservaArray();
+	return 0;	
+}
+
+
