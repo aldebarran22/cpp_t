@@ -1,0 +1,5 @@
+1 char -> 1 byte (8 bits)
+1 - 000 0000 -> -127 al 128
+
+unsigned char -> 1 byte
+8 bits para el número: 0 al 255
