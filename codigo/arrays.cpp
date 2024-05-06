@@ -52,12 +52,28 @@ void operadoresPunteros(){
 	*ptr = 500;
 	
 	// Imprimir la var:
-		std::cout << "numero: " << numero << std::endl;
+	std::cout << "numero: " << numero << std::endl;
+}
+
+void arraysYPunteros(){
+	int numeros[] = {1,2,3,4,5,6,7,8,9,10}; 
+	
+	
+	int *p = numeros;
+	
+	// El nombre del array ya representa un puntero al primer elemento:
+	*numeros = 100;
+	
+	for (int i = 0 ; i < N ; i++){
+		std::cout << numeros[i] << " " << p[i] << std::endl;
+	}
+	std::cout << std::endl;
 }
 
 
 int main(){
 	//definicionArrays();
-	operadoresPunteros();
+	//operadoresPunteros();
+	arraysYPunteros();
 	return 0;
 }
