@@ -28,11 +28,36 @@ void definicionArrays(){
 	int tam = sizeof(numeros) / sizeof(int);
 	std::cout << "El tam es: " << tam << std::endl;
 	
+	// Modificar valores:
+	numeros3[0] = 1000;
+	std::cout << numeros3[0] << std::endl;	
 }
 
 
+void operadoresPunteros(){
+	// & extraer la direccion de una variable
+	// * para acceder al contenido de la variable (a traves del puntero)
+	int numero = 100;
+	
+	int *ptr = nullptr;  // = nullptr;   = 0;  = NULL;
+	
+	// Extraer la dir de la variable:
+	ptr = &numero;
+	std::cout << "El ptr ocupa: " << sizeof(int *) << " bytes" << std::endl;
+	
+	// Imprimir la var. a través del puntero:
+	std::cout << "numero: " << *ptr << std::endl;
+	
+	// Modificar var a traves del puntero:
+	*ptr = 500;
+	
+	// Imprimir la var:
+		std::cout << "numero: " << numero << std::endl;
+}
+
 
 int main(){
-	definicionArrays();
+	//definicionArrays();
+	operadoresPunteros();
 	return 0;
 }
