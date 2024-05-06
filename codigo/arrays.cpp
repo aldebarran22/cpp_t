@@ -55,9 +55,23 @@ void operadoresPunteros(){
 	std::cout << "numero: " << numero << std::endl;
 }
 
+void imprimirArray(int array[], int n){
+
+	for (int i = 0 ; i < n ; i++){
+		std::cout << array[i] << " ";
+	}
+	std::cout << std::endl;
+
+}
+
+// ESTA MAL, SE CALCULA EL TAMAÑO DEL ARRAY CON EL PUNTERO, Y EL PUNTERO SIEMPRE OCUPA 8 BYTES!!!
+void imprimirArray2(int *array){
+	int tam = sizeof(array) / sizeof(int);
+	std::cout << "El tam de array es: " << tam << std::endl;
+}
+
 void arraysYPunteros(){
-	int numeros[] = {1,2,3,4,5,6,7,8,9,10}; 
-	
+	int numeros[] = {1,2,3,4,5,6,7,8,9,10,12,33,33,22,11,100}; 	
 	
 	int *p = numeros;
 	
@@ -68,6 +82,11 @@ void arraysYPunteros(){
 		std::cout << numeros[i] << " " << p[i] << std::endl;
 	}
 	std::cout << std::endl;
+	
+	// Llamada a la función de imprimirArray:
+	int tam = sizeof(numeros) / sizeof(int);
+	imprimirArray(numeros, tam);
+	
 }
 
 
