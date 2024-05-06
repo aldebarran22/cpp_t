@@ -58,6 +58,7 @@ void puntero_vs_referencia(){
 	
 	ref = 10;
 	ref = numero2;
+	std::cout << "numero: " << numero << " numero2: " << numero2 << std::endl;
 	ref = 20;
 	
 	std::cout << "numero: " << numero << " numero2: " << numero2 << std::endl;

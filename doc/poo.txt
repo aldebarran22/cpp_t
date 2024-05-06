@@ -1,0 +1,55 @@
+Personas:
+
+describir personas por características: ==> Atributos
+peso, altura, color de pelo, color de ojos ...
+
+las personas realizan acciones: ==> Métodos
+correr(), andar(), nadar()
+
+1 Persona ==> 1 objeto (instancia)
+peso = 78 kg
+altura = 1.9
+
+CLase (es una), objetos (pueden muchos)
+Persona p1("xxxx")
+p1.correr();
+
+Persona p2("yyyy")
+p2.correr()
+
+this: un puntero al objeto que está en curso
+this->peso++;
+
+//////////////////////////////////////////////////////////////////
+
+Relaciones entre clases:
+- Herencia: cuando tengamos clases que tienen cosas en común
+
+  Empleado -> programador, jefeProyecto, administrativo, sistemas
+
+                 Coche
+		/      \
+       C.Gasolina      C.Electrico
+               \       /
+                Hibrido
+
+- Composición: Desglose en partes de una clase en objetos que pertenecen a otras clases:
+
+   Coche
+       - Motor
+       - Chasis
+       - Ruedas
+
+   Ordenador:
+       - Placa
+       - Disco
+       . Mem.
+
+- Asociación: dos objetos independientes, en un instante en el tiempo se relacionan
+     Coche y SurtidorGas
+
+    Coche coche;
+    coche.repostar(surtidor);
+
+
+
