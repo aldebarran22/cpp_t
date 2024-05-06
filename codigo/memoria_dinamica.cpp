@@ -13,28 +13,6 @@ imprimir()
 
 liberar()*/
 
-void porCopia(int n){
-	// Recibimos una copia de la variable de main
-	n++;
-	std::cout << "n en porCopia : " << n << std::endl;
-}
-
-void porPtr(int *n){
-	// Recibimos la dir. de la variable de main.
-	(*n)++;
-	std::cout << "n en porPtr : " << *n << std::endl;
-}
-
-void pruebasCopiaYPtr(){
-	int n = 100;
-	
-	porCopia(n);
-	std::cout << "n : " << n << std::endl;
-	
-	n = 100;
-	porPtr(&n);
-	std::cout << "n : " << n << std::endl;
-}
 
 void reservaArray(){
 
@@ -92,7 +70,7 @@ void imprimirArray(int *array, int n){
 void liberar(int *ptr){
 	// Esta funcion libera BIEN pero no pone el puntero de main a nullptr;
 	delete [] ptr;
-	ptr = nullptr; // Esto NO hace nada, actua sobre una copia
+	ptr = nullptr; // Esto NO hace nada, actua sobre una copia !!!!!! mejor utiliza la funcion liberar2
 }
 
 void liberar2(int **ptr){
@@ -106,8 +84,18 @@ void reservarMemoria2(int n, int **ptr){
 	
 	for (int i = 0 ; i < n ; i++){
 		(*ptr)[i] =  std::rand() % 100;
-	}
+	}	
+}
+
+void reservarMemoria3(int n, int **ptr){
+	int *aux = new int[n];
+	std::cout << "Reserva en: " << ptr << std::endl;
 	
+	for (int i = 0 ; i < n ; i++){
+		aux[i] =  std::rand() % 100;
+	}	
+	
+	*ptr = aux;
 }
 
 int main(){
@@ -124,7 +112,8 @@ int main(){
 	std::cin >> n;
 	
 	//ptr = reservarMemoria(n);
-	reservarMemoria2(n, &ptr);
+	//reservarMemoria2(n, &ptr);
+	reservarMemoria3(n, &ptr);
 	imprimirArray(ptr, n);
 	//liberar(ptr);
 	liberar2(&ptr);
