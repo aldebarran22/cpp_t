@@ -89,10 +89,24 @@ void arraysYPunteros(){
 	
 }
 
-int *crearArrayDia(){
+// ESTO ESTA MAL!!!! DEVOLVEMOS LA DIR. DE UNA VAR. LOCAL QUE DESAPARECE EN EL MOMENTO QUE TERMINA LA FUNCIÓN
+// LA VAR. LOCAL SE ALMACENA EN LA PILA (STACK)
+int *crearArrayDias_MAL(){
 	int dias[] = {31,28,31,30,31,30,31,31,30,31,30,31};
 	
 	return dias;
+}
+
+// LA RESERVA DE MEMORIA SE HACE EN EL HEAP (MONTICULO) Y ESTA NO SE LIBERA AUTOMATICAMENTE
+// ES REPOSNSABILIDAD DEL PROGRAMADOR
+int *crearArrayDias_BIEN(){
+	int *ptr = new int[12];
+	int dias[] = {31,28,31,30,31,30,31,31,30,31,30,31};
+	
+	for (int i = 0 ; i < 12 ; i++)
+		ptr[i] = dias[i];
+	
+	return ptr;	
 }
 
 
@@ -101,8 +115,10 @@ int main(){
 	//operadoresPunteros();
 	//arraysYPunteros();
 	
-	int *ptr = crearArrayDia();
+	int *ptr = crearArrayDias_BIEN();
 	imprimirArray(ptr, 12);
+	delete [] ptr;
+	ptr = nullptr;
 	
 	return 0;
 }
