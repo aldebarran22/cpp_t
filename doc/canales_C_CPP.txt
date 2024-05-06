@@ -1,0 +1,7 @@
+Consola
+
+Lib: stdio.h				Lib: iostream
+En C: (3 canales)			En C++
+stdin --> entrada estandar      	cin
+stdout --> salida estandar		cout
+stderr --> salida estandar err.		cerr
