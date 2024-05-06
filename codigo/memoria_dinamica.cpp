@@ -20,7 +20,8 @@ int main(){
 	
 	// Reservar memoria:
 	ptr = new int[n];
-	 
+	std::cout << "Reserva en: " << ptr << std::endl;
+	  
 	// Inicializar
 	for (int i = 0 ; i < n ; i++){
 		ptr[i] =  std::rand() % 100;
