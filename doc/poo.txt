@@ -51,5 +51,22 @@ Relaciones entre clases:
     Coche coche;
     coche.repostar(surtidor);
 
+//////////////////////////////////////////////////////////////////////
+clases Abstractas: 1 método abstracto ==> 1 clase abstracta
+
+	     Figura (color, etiqueta, ...)
+	     /       \
+    Figura2D (P2D)     Figura3D (Punto3D)
+   /   |  \            \
+ Tri  Cir  Cua         Cilindro
+
+
+
+
+
+
+
+
+
 
 
