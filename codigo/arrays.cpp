@@ -24,6 +24,10 @@ void definicionArrays(){
 	}
 	std::cout << std::endl;
 	
+	// Calcular el numero de elementos del array:
+	int tam = sizeof(numeros) / sizeof(int);
+	std::cout << "El tam es: " << tam << std::endl;
+	
 }
 
 
