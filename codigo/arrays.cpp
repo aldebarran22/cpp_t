@@ -89,10 +89,20 @@ void arraysYPunteros(){
 	
 }
 
+int *crearArrayDia(){
+	int dias[] = {31,28,31,30,31,30,31,31,30,31,30,31};
+	
+	return dias;
+}
+
 
 int main(){
 	//definicionArrays();
 	//operadoresPunteros();
-	arraysYPunteros();
+	//arraysYPunteros();
+	
+	int *ptr = crearArrayDia();
+	imprimirArray(ptr, 12);
+	
 	return 0;
 }
