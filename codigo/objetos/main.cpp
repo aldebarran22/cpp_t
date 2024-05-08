@@ -55,6 +55,14 @@ void testVector(){
 	v3.print();
 	std::cout << std::endl;
 	
+	int *p;
+	const int *ptr;
+	
+	ptr = v1.getPtr();
+	p = const_cast<int *>(ptr);
+	p[0] = 99999;
+	
+	
 	std::cout << "v1 Num elems: " << v1.len() << std::endl;
 	v1.print();
 }
@@ -74,7 +82,7 @@ void testStatic(){
 
 int main(int argc, char** argv) {
 	//testPersona();
-	//testVector();
-	testStatic();
+	testVector();
+	//testStatic();
 	return 0;
 }

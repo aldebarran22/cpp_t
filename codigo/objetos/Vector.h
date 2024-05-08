@@ -23,7 +23,11 @@ class Vector
 		
 		bool add(int);
 		void print();
+		
 		int len(){ return pos; }
+		int capacity(){ return n; }
+		const int *getPtr(){ return ptr; }
+		
 		~Vector();
 	protected:
 };
