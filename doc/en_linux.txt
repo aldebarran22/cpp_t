@@ -1,4 +1,6 @@
 g++ *.cpp -o objetos
-
 ./objetos
+
+
+g++ -std=c++11 *.cpp -o objetos
 
