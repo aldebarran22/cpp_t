@@ -18,6 +18,8 @@ class Persona
 	public:
 		Persona();
 		Persona(std::string, int, double, Direccion);
+		Persona(const Persona &);
+		
 		
 		inline std::string getNombre() const { return nombre; }
 		inline void setNombre(std::string nombre){ this->nombre=nombre; }

@@ -6,6 +6,16 @@ Persona::Persona(){
 	Persona::contador++;
 }
 
+Persona::Persona(const Persona &p)
+{
+	this->nombre = p.nombre;
+	this->edad = p.edad;
+	this->altura = p.altura;
+	this->dir = p.dir;
+	
+	Persona::contador++;
+}
+
 
 Persona::Persona(std::string nombre, int edad, double altura, Direccion dir)
 {

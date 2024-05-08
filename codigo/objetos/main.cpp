@@ -67,6 +67,8 @@ void testStatic(){
 	Direccion dir("Gran Via");	
 	const Persona p("Ana", 33, 1.77, dir);
 	
+	Persona p3(p);
+	
 	std::cout << "contador: " << Persona::getContador() << std::endl;
 }
 
