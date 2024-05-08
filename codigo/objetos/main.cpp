@@ -6,12 +6,14 @@
 
 void testPersona(){
 	Direccion dir("Gran Via");
-	Persona p; // Llama al constructor por defecto
+	Persona p; // Llama al constructor por defecto	
+	
 	Persona p2("Ana", 33, 1.77, dir);
 	Persona p3(p2); // Salta el constructor copia!
+	Persona p4 = p2;
 	Persona *ptr = nullptr;
 	
-	p = p2; // Salta el operador =
+	p = p2; // Salta el operador =   p.operator=(p2)
 	
 	std::cout << "p: " << p.to_string() <<  std::endl;
 	std::cout << "p2: " << p2.to_string() <<  std::endl;

@@ -1,8 +1,7 @@
 #include "Persona.h"
 
-Persona::Persona()
-{
-}
+Persona::Persona(){}
+
 
 Persona::Persona(std::string nombre, int edad, double altura, Direccion dir)
 {

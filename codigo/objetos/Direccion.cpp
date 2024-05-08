@@ -1,5 +1,7 @@
 #include "Direccion.h"
 
+
+Direccion::Direccion(){}
 													// Lista de iniciadores.
 Direccion::Direccion(std::string calle_, int numero_):calle(calle_), numero(numero_)
 {

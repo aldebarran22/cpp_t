@@ -10,6 +10,7 @@ class Direccion
 	int numero;
 	
 	public:
+		Direccion();
 		Direccion(std::string="", int=0);
 		std::string to_string();
 		~Direccion();
