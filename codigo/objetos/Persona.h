@@ -7,6 +7,8 @@
 
 class Persona
 {
+	
+	
 	private:
 		std::string nombre;
 		int edad;
@@ -20,6 +22,7 @@ class Persona
 		Persona(std::string, int, double, Direccion);
 		Persona(const Persona &);
 		
+		bool operator<(const Persona &) const;
 		
 		inline std::string getNombre() const { return nombre; }
 		inline void setNombre(std::string nombre){ this->nombre=nombre; }

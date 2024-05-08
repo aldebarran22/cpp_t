@@ -28,6 +28,11 @@ Persona::Persona(std::string nombre, int edad, double altura, Direccion dir)
 	Persona::contador++;
 }
 
+bool Persona::operator<(const Persona &p) const
+{
+	return this->edad < p.edad;
+}
+
 std::string Persona::to_string() 
 {
 	// Aquí no es obligatorio this:

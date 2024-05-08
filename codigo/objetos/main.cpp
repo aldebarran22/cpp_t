@@ -80,9 +80,28 @@ void testStatic(){
 	std::cout << "contador: " << Persona::getContador() << std::endl;
 }
 
+void testOperadores()
+{
+	Direccion dir("Gran Via");	
+	Persona p("Ana", 35, 1.77, dir);
+	
+	Direccion dir2("Gran Via");	
+	Persona p2("Pablo", 34, 1.78, dir2);
+	
+	if (p < p2){
+		std::cout << p.getNombre() <<  " es menor que " << p2.getNombre() << std::endl;
+		
+	} else {
+		std::cout << p2.getNombre() <<  " es menor que " << p.getNombre() << std::endl;
+		
+	}
+	
+}
+
 int main(int argc, char** argv) {
 	//testPersona();
-	testVector();
+	//testVector();
 	//testStatic();
+	testOperadores();
 	return 0;
 }
