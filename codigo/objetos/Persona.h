@@ -16,6 +16,13 @@ class Persona
 	public:
 		Persona();
 		Persona(std::string, int, double, Direccion);
+		
+		inline std::string getNombre(){ return nombre; }
+		inline void setNombre(std::string nombre){ this->nombre=nombre; }
+		
+		inline int getEdad(){ return edad; }
+		inline void setEdad(int edad){ this->edad = edad; }
+		
 		std::string to_string();
 		~Persona();
 	protected:

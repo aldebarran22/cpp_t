@@ -19,6 +19,10 @@ void testPersona(){
 	std::cout << "p2: " << p2.to_string() <<  std::endl;
 	std::cout << "p3: " << p3.to_string() <<  std::endl;
 	
+	//p.edad++; OJO el atributo es privado solo se puede modificar desde la propia clase.
+	p.setEdad(p.getEdad()+1);
+	std::cout << "p: " << p.to_string() <<  std::endl;
+	
 	// Crear un objeto dinamicamente:
 	ptr = new Persona("Alberto", 55, 1.78, Direccion("Callao", 45));
 	std::cout << ptr->to_string() <<  std::endl;
