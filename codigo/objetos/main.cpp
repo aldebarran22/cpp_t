@@ -57,12 +57,22 @@ void testVector(){
 	
 	std::cout << "v1 Num elems: " << v1.len() << std::endl;
 	v1.print();
+}
+
+void testStatic(){
+	std::cout << "contador: " << Persona::getContador() << std::endl;
+	Persona p1;
+	Persona p2;
 	
+	Direccion dir("Gran Via");	
+	const Persona p("Ana", 33, 1.77, dir);
 	
+	std::cout << "contador: " << Persona::getContador() << std::endl;
 }
 
 int main(int argc, char** argv) {
 	//testPersona();
-	testVector();
+	//testVector();
+	testStatic();
 	return 0;
 }

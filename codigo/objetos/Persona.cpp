@@ -1,6 +1,10 @@
 #include "Persona.h"
 
-Persona::Persona(){}
+int Persona::contador = 0;
+
+Persona::Persona(){
+	Persona::contador++;
+}
 
 
 Persona::Persona(std::string nombre, int edad, double altura, Direccion dir)
@@ -10,6 +14,8 @@ Persona::Persona(std::string nombre, int edad, double altura, Direccion dir)
 	this->edad = edad;
 	this->altura = altura;
 	this->dir = dir;
+	
+	Persona::contador++;
 }
 
 std::string Persona::to_string() 

@@ -12,6 +12,8 @@ class Persona
 		int edad;
 		double altura;
 		Direccion dir;
+		
+		static int contador;
 	
 	public:
 		Persona();
@@ -23,9 +25,12 @@ class Persona
 		inline int getEdad() const { return edad; }
 		inline void setEdad(int edad){ this->edad = edad; }
 		
+		static int getContador(){ return Persona::contador; }
+		
 		std::string to_string();
 		std::string to_string() const;
 		~Persona();
+		
 	protected:
 };
 
