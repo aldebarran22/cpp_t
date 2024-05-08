@@ -82,18 +82,20 @@ void testStatic(){
 
 void testOperadores()
 {
-	Direccion dir("Gran Via");	
-	Persona p("Ana", 35, 1.77, dir);
+	Direccion dir("Gran Via", 10);	
+	Persona p("Ana", 35, 1.76, dir);
 	
-	Direccion dir2("Gran Via");	
-	Persona p2("Pablo", 34, 1.78, dir2);
+	Direccion dir2("Gran Via", 9);	
+	Persona p2("Ana", 35, 1.76, dir2);
 	
 	if (p < p2){
 		std::cout << p.getNombre() <<  " es menor que " << p2.getNombre() << std::endl;
 		
-	} else {
-		std::cout << p2.getNombre() <<  " es menor que " << p.getNombre() << std::endl;
+	} else if (p == p2) {
+		std::cout << p2.getNombre() <<  " es igual a " << p.getNombre() << std::endl;
 		
+	} else {
+		std::cout << " son distintos " << std::endl;
 	}
 	
 }

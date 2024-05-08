@@ -7,7 +7,7 @@
 
 class Persona
 {
-	
+	friend bool operator==(const Persona &, const Persona &);
 	
 	private:
 		std::string nombre;

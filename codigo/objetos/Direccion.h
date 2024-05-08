@@ -13,6 +13,7 @@ class Direccion
 		//Direccion(); Si metemos el constructor por defecto da problemas de ambiguedad porque coincide con el otro.
 		Direccion(std::string="", int=0);
 		std::string to_string() const;
+		bool operator==(const Direccion &) const;
 		~Direccion();
 	protected:
 };
