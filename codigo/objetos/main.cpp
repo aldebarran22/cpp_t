@@ -36,6 +36,10 @@ void testPersona(){
 
 void testVector(){
 	Vector v1(20);
+	//Vector v2(v1);
+	Vector v3;
+	
+	//v3 = v1;
 	
 	for (int i = 0 ; i < 10 ; i++)
 	{

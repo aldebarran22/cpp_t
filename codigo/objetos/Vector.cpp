@@ -1,4 +1,5 @@
 #include <iostream>
+#include <algorithm>
 
 #include "Vector.h"
 
@@ -7,6 +8,43 @@ Vector::Vector(int n)
 	this->n = n;
 	this->pos = 0;
 	this->ptr = new int[n];
+}
+
+void Vector::copiar(const Vector &v)
+{
+	// Copiar n y pos
+	this->n = v.n;
+	this->pos = v.pos;
+	
+	// Reservar tanta memoria como tenga v
+	this->ptr = new int[v.n];
+	
+	// Copiar los datos de v a this
+	/*
+	for (int i = 0 ; i < v.pos ; i++)
+	{
+		this->ptr[i] = v.ptr[i]
+	}*/
+	std::copy(v.ptr, v.ptr+v.n, this->ptr);
+}
+
+Vector::Vector(const Vector &v)
+{
+	this->copiar(v);
+}
+	
+Vector & Vector::operator=(const Vector &v)
+{
+	// liberar la mem de this
+	delete [] this->ptr;
+	
+	// Copiar n y pos
+	// Reservar tanta memoria como tenga v
+	// Copiar los datos de v a this
+	this->copiar(v);
+	
+	// retornar la referencia a this
+	return *this;
 }
 
 bool Vector::add(int num)
