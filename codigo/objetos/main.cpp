@@ -36,10 +36,9 @@ void testPersona(){
 
 void testVector(){
 	Vector v1(20);
-	//Vector v2(v1);
+	Vector v2(v1);
 	Vector v3;
-	
-	//v3 = v1;
+		
 	
 	for (int i = 0 ; i < 10 ; i++)
 	{
@@ -47,8 +46,19 @@ void testVector(){
 			std::cout << "Array lleno ..." << std::endl;		
 	}
 	
-	std::cout << "Num elems: " << v1.len() << std::endl;
+	v3 = v1;
+	
+	v3.add(999);
+	v3.add(1000);
+	
+	std::cout << "v3 Num elems: " << v3.len() << std::endl;
+	v3.print();
+	std::cout << std::endl;
+	
+	std::cout << "v1 Num elems: " << v1.len() << std::endl;
 	v1.print();
+	
+	
 }
 
 int main(int argc, char** argv) {
