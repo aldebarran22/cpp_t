@@ -7,7 +7,7 @@ Direccion::Direccion(std::string calle_, int numero_):calle(calle_), numero(nume
 {
 }
 
-std::string Direccion::to_string()
+std::string Direccion::to_string() const
 {
 	return calle + " " + std::to_string(numero);
 }

@@ -12,11 +12,16 @@ Persona::Persona(std::string nombre, int edad, double altura, Direccion dir)
 	this->dir = dir;
 }
 
-
-std::string Persona::to_string()
+std::string Persona::to_string() 
 {
 	// Aquí no es obligatorio this:
-	return this->nombre + " " + std::to_string(this->edad) + " " + std::to_string(this->altura) + " " + this->dir.to_string();
+	return "NO const: " + this->nombre + " " + std::to_string(this->edad) + " " + std::to_string(this->altura) + " " + this->dir.to_string();
+}
+
+std::string Persona::to_string() const
+{
+	// Aquí no es obligatorio this:
+	return "const: " + this->nombre + " " + std::to_string(this->edad) + " " + std::to_string(this->altura) + " " + this->dir.to_string();
 }
 
 Persona::~Persona()

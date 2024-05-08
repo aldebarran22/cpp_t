@@ -8,7 +8,7 @@ void testPersona(){
 	Direccion dir("Gran Via");
 	Persona p; // Llama al constructor por defecto	
 	
-	Persona p2("Ana", 33, 1.77, dir);
+	const Persona p2("Ana", 33, 1.77, dir);
 	Persona p3(p2); // Salta el constructor copia!
 	Persona p4 = p2;
 	Persona *ptr = nullptr;
@@ -20,6 +20,7 @@ void testPersona(){
 	std::cout << "p3: " << p3.to_string() <<  std::endl;
 	
 	//p.edad++; OJO el atributo es privado solo se puede modificar desde la propia clase.
+	//p2.setNombre("Ana Maria");
 	p.setEdad(p.getEdad()+1);
 	std::cout << "p: " << p.to_string() <<  std::endl;
 	

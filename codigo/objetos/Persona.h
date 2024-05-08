@@ -17,13 +17,14 @@ class Persona
 		Persona();
 		Persona(std::string, int, double, Direccion);
 		
-		inline std::string getNombre(){ return nombre; }
+		inline std::string getNombre() const { return nombre; }
 		inline void setNombre(std::string nombre){ this->nombre=nombre; }
 		
-		inline int getEdad(){ return edad; }
+		inline int getEdad() const { return edad; }
 		inline void setEdad(int edad){ this->edad = edad; }
 		
 		std::string to_string();
+		std::string to_string() const;
 		~Persona();
 	protected:
 };
