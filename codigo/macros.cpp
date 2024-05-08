@@ -19,5 +19,11 @@ int main(){
 	std::cout << "entero menor: " << r1 << std::endl;
 	std::cout << "string menor: " << cad << std::endl;
 	
+	int a = 10, b = 20;
+	
+	int resul = MENOR(a++,b++);
+	
+	std::cout << "a: " << a << " b: " << b << std::endl;
+	
 	return 0;
 }
