@@ -4,8 +4,8 @@
 CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
-OBJ      = main.o Persona.o Direccion.o Vector.o
-LINKOBJ  = main.o Persona.o Direccion.o Vector.o
+OBJ      = main.o Persona.o Direccion.o Vector.o funciones_amigas.o
+LINKOBJ  = main.o Persona.o Direccion.o Vector.o funciones_amigas.o
 LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -lgdi32 -lcomdlg32
 INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
 CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
@@ -35,3 +35,6 @@ Direccion.o: Direccion.cpp
 
 Vector.o: Vector.cpp
 	$(CPP) -c Vector.cpp -o Vector.o $(CXXFLAGS)
+
+funciones_amigas.o: funciones_amigas.cpp
+	$(CPP) -c funciones_amigas.cpp -o funciones_amigas.o $(CXXFLAGS)

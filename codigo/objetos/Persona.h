@@ -4,6 +4,7 @@
 #include <string>
 
 #include "Direccion.h"
+#include "funciones_amigas.h"
 
 class Persona
 {

@@ -88,7 +88,7 @@ void testOperadores()
 	Direccion dir2("Gran Via", 9);	
 	Persona p2("Ana", 35, 1.76, dir2);
 	
-	if (p < p2){
+	if (p < p2){	
 		std::cout << p.getNombre() <<  " es menor que " << p2.getNombre() << std::endl;
 		
 	} else if (p == p2) {
