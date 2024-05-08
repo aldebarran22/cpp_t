@@ -3,14 +3,14 @@
 #include <iostream>
 #include <string>
 
+double valor = 999.0;
+
 enum coordenadas {NORTE, ESTE, OESTE=5, SUR};
 
 
 void imprimir(float valor){
 	std::cout << "valor: " << valor << std::endl;
 }
-
-
 
 int main(){
 	double valor = 34.6677;
@@ -32,6 +32,11 @@ int main(){
 	std::cout << "ptr2: " << ptr2 << std::endl;
 	std::cout << "nombre: " << nombre << std::endl;
 	
+	for (int i = 0 ; i < 10 ; i++)
+		std::cout << "i: " << i << std::endl;
+	//std::cout << "i: " << i << std::endl; // Está fuera del ámbito del for
 	
+	std::cout << "valor local: " << valor << " valor global: " << ::valor << std::endl;
 	
+	return 0;
 }
