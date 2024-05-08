@@ -2,6 +2,7 @@
 
 #include "Persona.h"
 #include "Direccion.h"
+#include "Vector.h"
 
 
 void testPersona(){
@@ -32,7 +33,22 @@ void testPersona(){
 	ptr = nullptr;
 }
 
+
+void testVector(){
+	Vector v1(20);
+	
+	for (int i = 0 ; i < 10 ; i++)
+	{
+		if (!v1.add(i*10))
+			std::cout << "Array lleno ..." << std::endl;		
+	}
+	
+	std::cout << "Num elems: " << v1.len() << std::endl;
+	v1.print();
+}
+
 int main(int argc, char** argv) {
-	testPersona();
+	//testPersona();
+	testVector();
 	return 0;
 }
