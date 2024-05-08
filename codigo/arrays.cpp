@@ -58,7 +58,7 @@ void operadoresPunteros(){
 void imprimirArray(int array[], int n){
 
 	for (int i = 0 ; i < n ; i++){
-		std::cout << array[i] << " ";
+		std::cout << array[i] << " " << (array+i) << " " << *(array+i) << std::endl;
 	}
 	std::cout << std::endl;
 
