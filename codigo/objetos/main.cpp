@@ -8,9 +8,14 @@ void testPersona(){
 	Direccion dir("Gran Via");
 	Persona p; // Llama al constructor por defecto
 	Persona p2("Ana", 33, 1.77, dir);
+	Persona p3(p2); // Salta el constructor copia!
 	Persona *ptr = nullptr;
 	
-	std::cout << p2.to_string() <<  std::endl;
+	p = p2; // Salta el operador =
+	
+	std::cout << "p: " << p.to_string() <<  std::endl;
+	std::cout << "p2: " << p2.to_string() <<  std::endl;
+	std::cout << "p3: " << p3.to_string() <<  std::endl;
 	
 	// Crear un objeto dinamicamente:
 	ptr = new Persona("Alberto", 55, 1.78, Direccion("Callao", 45));
