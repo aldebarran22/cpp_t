@@ -1,3 +1,5 @@
+#include <iostream>
+
 #include "Vector.h"
 
 Vector::Vector(int n)
@@ -21,9 +23,15 @@ bool Vector::add(int num)
 
 void Vector::print()
 {
-	
+	for (int i = 0 ; i < pos ; i++)
+	{
+		std::cout << this->ptr[i] << " ";
+	}
+	std::cout << std::endl;
 }
 
 Vector::~Vector()
 {
+	delete [] this->ptr;
+	this->ptr = nullptr;
 }
