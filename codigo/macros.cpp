@@ -4,8 +4,15 @@
 #include <iostream>
 #include <string>
 
+#define N 10
+#define M 20
+
+#define TOTAL N+M
+
 #define PATH "C:\\mis documentos"
 #define MENOR(a,b) ((a)<(b)?(a):(b))
+
+typedef unsigned char TByte;
 
 
 int main(){
@@ -24,6 +31,8 @@ int main(){
 	int resul = MENOR(a++,b++);
 	
 	std::cout << "a: " << a << " b: " << b << std::endl;
+	
+	TByte b1 = 0xFF;
 	
 	return 0;
 }
