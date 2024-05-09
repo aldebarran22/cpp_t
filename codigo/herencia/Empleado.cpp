@@ -31,6 +31,11 @@ void Empleado::subirSueldo(TablaBaremos tabla) {
     return;
 }
 
+ostream & operator<<(ostream &os, const Empleado &e)
+{
+	return os << e.nombre << " " << e.apellidos << " " << e.codigo << " " << e.sueldo;
+}
+
 Empleado::~Empleado() {
 
 }

@@ -1,7 +1,12 @@
 #include <iostream>
 
-/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+#include "Empleado.h"
+
 
 int main(int argc, char** argv) {
+	
+	Empleado emp("Juan", "Gomez", 123343, 2000.0);
+	std::cout << emp << std::endl;
+	
 	return 0;
 }
