@@ -1,10 +1,16 @@
 #ifndef DIRECCION_H
 #define DIRECCION_H
 
+#include <iostream>
 #include <string>
+
+#include "funciones_amigas.h"
 
 class Direccion
 {
+	// Funciones friend:
+	friend std::ostream & operator<<(std::ostream &, const Direccion &);
+	
 	// Att. privados
 	std::string calle;
 	int numero;
