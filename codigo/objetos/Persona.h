@@ -1,6 +1,7 @@
 #ifndef PERSONA_H
 #define PERSONA_H
 
+#include <iostream>
 #include <string>
 
 #include "Direccion.h"
@@ -9,6 +10,7 @@
 class Persona
 {
 	friend bool operator==(const Persona &, const Persona &);
+	friend std::ostream & operator<<(std::ostream &, const Persona &);
 	
 	private:
 		std::string nombre;
