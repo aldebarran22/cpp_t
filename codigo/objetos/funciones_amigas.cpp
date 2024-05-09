@@ -16,10 +16,17 @@ std::ostream & operator<<(std::ostream &os, const Persona &p)
 
 std::istream & operator>>(std::istream &is, Persona &p)
 {	
+	std::cout << "\nNombre:";
 	std::getline(is, p.nombre);
+	
+	std::cout << "Edad:";
 	is >> p.edad;
+	
+	std::cout << "Altura:";
 	is >> p.altura;
 	is.ignore(INT_MAX, '\n'); // Limpiar el \n despues de leer un numero y antes de leer la cadena.
+	
+	std::cout << "Direccion:";
 	is >> p.dir;
 	return is;
 }
@@ -31,7 +38,10 @@ std::ostream & operator<<(std::ostream &os, const Direccion &dir)
 
 std::istream & operator>>(std::istream &is, Direccion &dir)
 {
+	std::cout << "\nCalle:";
 	std::getline(is, dir.calle);
+	
+	std::cout << "Numero:";
 	is >> dir.numero;
 	return is;
 }
