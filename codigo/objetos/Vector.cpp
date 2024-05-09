@@ -48,6 +48,8 @@ const Vector Vector::operator+(const Vector &v)
 	// Copiar los elementos de v:
 	std::copy(v.ptr, v.ptr+v.pos, resul.ptr+this->pos);
 	
+	return resul;
+	
 }
 	
 Vector & Vector::operator=(const Vector &v)
