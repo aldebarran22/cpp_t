@@ -85,7 +85,7 @@ void pruebasVector2()
 {
 	std::vector<int> numeros;
 	
-	for (int i = 0 ; i < 25 ; i++)
+	for (int i = 0 ; i < 33 ; i++)
 	{
 		numeros.push_back(i);
 		std::cout << "capacity: " << numeros.capacity() << " size: " << numeros.size() << std::endl;
