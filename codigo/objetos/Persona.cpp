@@ -28,6 +28,21 @@ Persona::Persona(std::string nombre, int edad, double altura, Direccion dir)
 	Persona::contador++;
 }
 
+Persona Persona::operator++()
+{
+	// Prefijo
+	this->edad++;
+	return *this;
+}
+
+Persona Persona::operator++(int)
+{
+	// postfijo
+	Persona copia(*this);
+	this->edad++;
+	return copia;
+}
+
 bool Persona::operator<(const Persona &p) const
 {
 	return this->edad < p.edad;
