@@ -1,3 +1,4 @@
+#include <climits>
 
 #include "funciones_amigas.h"
 #include "Persona.h"
@@ -14,13 +15,12 @@ std::ostream & operator<<(std::ostream &os, const Persona &p)
 }
 
 std::istream & operator>>(std::istream &is, Persona &p)
-{
+{	
 	std::getline(is, p.nombre);
 	is >> p.edad;
 	is >> p.altura;
-	//is >> p.dir;
-	std::getline(is, p.dir.calle);
-	is >> p.dir.numero;
+	is.ignore(INT_MAX, '\n'); // Limpiar el \n despues de leer un numero y antes de leer la cadena.
+	is >> p.dir;
 	return is;
 }
 
