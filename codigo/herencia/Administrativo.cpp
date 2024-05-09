@@ -27,7 +27,12 @@ Empleado(nombre, apellidos, codigo, sueldo) {
 
 ostream & operator<<(ostream &os, const Administrativo &a)
 {
-	return os << "ADM:" << static_cast<Empleado>(a) << " " << a.paga1 << " " << a.paga2;
+	return os << "ADM:" << static_cast<Empleado>(a) << " " << a.paga1 << " " << a.paga2 << " " << a.cv();
+}
+
+string Administrativo::cv() const
+{
+	return "CV del Administrativo";
 }
 
 Administrativo::~Administrativo() {

@@ -31,7 +31,7 @@ Empleado(string nombre, string apellidos, int codigo, double sueldo);
  * @param tabla
  */
 void subirSueldo(TablaBaremos tabla);
-string cv() const;
+virtual string cv() const;
 
 ~Empleado();
 
