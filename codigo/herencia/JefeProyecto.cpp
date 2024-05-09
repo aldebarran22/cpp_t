@@ -17,10 +17,11 @@
  * @param sueldo
  * @param incentivos
  */
-void JefeProyecto::JefeProyecto(string nombre, string apellidos, int codigo, double sueldo, double incentivos) {
+JefeProyecto::JefeProyecto(string nombre, string apellidos, int codigo, double sueldo, double incentivos):
+Empleado(nombre, apellidos, codigo, sueldo), incentivos(incentivos) {
 
 }
 
-void JefeProyecto::JefeProyecto() {
+JefeProyecto::~JefeProyecto() {
 
 }

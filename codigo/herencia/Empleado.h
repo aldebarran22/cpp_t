@@ -6,6 +6,12 @@
 #ifndef _EMPLEADO_H
 #define _EMPLEADO_H
 
+
+#include <string>
+using namespace std;
+
+#include "TablaBaremos.h"
+
 class Empleado {
 public: 
     
@@ -15,7 +21,7 @@ public:
  * @param codigo
  * @param sueldo
  */
-void Empleado(string nombre, string apellidos, int codigo, double sueldo);
+Empleado(string nombre, string apellidos, int codigo, double sueldo);
     
 /**
  * @param tabla
@@ -27,7 +33,7 @@ protected:
     int codigo;
     double sueldo;
     
-void Empleado();
+~Empleado();
 };
 
 #endif //_EMPLEADO_H

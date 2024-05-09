@@ -6,11 +6,13 @@
 #ifndef _JEFEPROYECTO_H
 #define _JEFEPROYECTO_H
 
-#include "Empleado.h"
+#include <string>
+using namespace std;
+
 #include "Empleado.h"
 
 
-class JefeProyecto: public Empleado, public Empleado {
+class JefeProyecto: public Empleado {
 public: 
     
 /**
@@ -20,10 +22,10 @@ public:
  * @param sueldo
  * @param incentivos
  */
-void JefeProyecto(string nombre, string apellidos, int codigo, double sueldo, double incentivos);
+JefeProyecto(string nombre, string apellidos, int codigo, double sueldo, double incentivos);
 protected: 
     
-void JefeProyecto();
+~JefeProyecto();
 private: 
     double incentivos;
 };

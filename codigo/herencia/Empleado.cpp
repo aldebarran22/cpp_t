@@ -16,8 +16,11 @@
  * @param codigo
  * @param sueldo
  */
-void Empleado::Empleado(string nombre, string apellidos, int codigo, double sueldo) {
-
+Empleado::Empleado(string nombre, string apellidos, int codigo, double sueldo) {
+	this->nombre=nombre;
+	this->apellidos = apellidos;
+	this->codigo = codigo;
+	this->sueldo = sueldo;	
 }
 
 /**
@@ -28,6 +31,6 @@ void Empleado::subirSueldo(TablaBaremos tabla) {
     return;
 }
 
-void Empleado::Empleado() {
+Empleado::~Empleado() {
 
 }

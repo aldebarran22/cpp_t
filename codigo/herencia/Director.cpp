@@ -18,10 +18,9 @@
  * @param paga
  * @param objetivos
  */
-void Director::Director(string nombre, string apellidos, int codigo, double sueldo, double paga, double objetivos) {
+Director::Director(string nombre, string apellidos, int codigo, double sueldo, double paga, double objetivos):
+Empleado(nombre, apellidos, codigo, sueldo), paga(paga), objetivos(objetivos) {}
 
-}
-
-void Director::Director() {
+Director::~Director() {
 
 }

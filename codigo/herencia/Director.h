@@ -6,6 +6,9 @@
 #ifndef _DIRECTOR_H
 #define _DIRECTOR_H
 
+#include <string>
+using namespace std;
+
 #include "Empleado.h"
 
 
@@ -20,10 +23,10 @@ public:
  * @param paga
  * @param objetivos
  */
-void Director(string nombre, string apellidos, int codigo, double sueldo, double paga, double objetivos);
+Director(string nombre, string apellidos, int codigo, double sueldo, double paga, double objetivos);
 protected: 
     
-void Director();
+~Director();
 private: 
     double paga;
     double objetivos;
