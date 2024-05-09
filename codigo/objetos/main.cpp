@@ -122,7 +122,28 @@ void testLeerEscribir()
 	std::cout << "Datos de la persona: ";
 	std::cin >> per;
 	std::cout << "Persona: " << per << std::endl;
+}
+
+void testSumaVector()
+{
+	Vector v1(10);
+	Vector v2(10);
 	
+	int arr1[] = {23, 6,33,44,22};
+	for (int i : arr1){
+		v1.add(i);
+	}
+	
+	int arr2[] = {4,5,1};
+	for (int i : arr2){
+		v2.add(i);
+	}
+	
+	Vector r = v1+v2;
+	
+	v1.print();
+	v2.print();
+	r.print();
 	
 }
 
@@ -131,6 +152,7 @@ int main(int argc, char** argv) {
 	//testVector();
 	//testStatic();
 	//testOperadores();
-	testLeerEscribir();
+	//testLeerEscribir();
+	testSumaVector();
 	return 0;
 }
