@@ -105,6 +105,7 @@ void testOperadores()
 
 void testLeerEscribir()
 {
+	Persona per;
 	Direccion dir;
 	std::string cadena;
 		
@@ -117,6 +118,12 @@ void testLeerEscribir()
 	std::cout << "Teclear una frase: ";
 	std::getline(std::cin, cadena);
 	std::cout << "Frase: " << cadena << std::endl;
+	
+	std::cout << "Datos de la persona: ";
+	std::cin >> per;
+	std::cout << "Persona: " << per << std::endl;
+	
+	
 }
 
 int main(int argc, char** argv) {
