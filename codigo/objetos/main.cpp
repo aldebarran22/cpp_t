@@ -1,4 +1,5 @@
 #include <iostream>
+#include <climits>
 
 #include "Persona.h"
 #include "Direccion.h"
@@ -105,10 +106,17 @@ void testOperadores()
 void testLeerEscribir()
 {
 	Direccion dir;
-	
+	std::string cadena;
+		
 	std::cout << "Teclear los datos de la direccion:";
 	std::cin >> dir;
+	std::cin.ignore(INT_MAX, '\n'); // Limpiar el buffer de teclado
 	std::cout << "Direccion: " << dir << std::endl;
+	
+	
+	std::cout << "Teclear una frase: ";
+	std::getline(std::cin, cadena);
+	std::cout << "Frase: " << cadena << std::endl;
 }
 
 int main(int argc, char** argv) {
