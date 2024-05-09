@@ -164,7 +164,26 @@ void testIncPersona()
 	
 	Persona aux2 = p++;
 	std::cout << "p: " << p << std::endl;
-	std::cout << "aux2: " << aux2 << std::endl;
+	std::cout << "aux2: " << aux2 << std::endl;	
+}
+
+void postPre(){
+	int i=0;
+	
+	if (i++){
+		std::cout << "i != 0" << std::endl;
+	} else {
+		std::cout << "i == 0" << std::endl;
+	}
+	
+	i=0;
+	
+	if (++i){
+		std::cout << "i != 0" << std::endl;
+	} else {
+		std::cout << "i == 0" << std::endl;
+	}
+	
 }
 
 int main(int argc, char** argv) {
@@ -174,6 +193,7 @@ int main(int argc, char** argv) {
 	//testOperadores();
 	//testLeerEscribir();
 	//testSumaVector();
-	testIncPersona();
+	//testIncPersona();
+	postPre();
 	return 0;
 }
