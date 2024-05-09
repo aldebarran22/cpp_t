@@ -27,6 +27,11 @@ ostream & operator<<(ostream &os, const JefeProyecto &jf)
 	return os << "JF: " << static_cast<Empleado>(jf) << " " << jf.incentivos;
 }
 
+string JefeProyecto::cv() const
+{
+	return "CV del JefeProyecto";
+}
+
 
 JefeProyecto::~JefeProyecto() {
 

@@ -27,6 +27,11 @@ ostream & operator<<(ostream &os, const Director &d)
 	return os  << "DIR: " << static_cast<Empleado>(d) << " " << d.paga << " " << d.objetivos;
 }
 
+string Director::cv() const
+{
+	return "CV del Director";
+}
+
 Director::~Director() {
 
 }

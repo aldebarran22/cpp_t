@@ -29,6 +29,7 @@ public:
  * @param objetivos
  */
 Director(string nombre, string apellidos, int codigo, double sueldo, double paga, double objetivos);
+string cv() const;
 ~Director();
 
 protected: 

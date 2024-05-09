@@ -27,6 +27,7 @@ public:
  * @param incentivos
  */
 JefeProyecto(string nombre, string apellidos, int codigo, double sueldo, double incentivos);
+string cv() const;
 ~JefeProyecto();
 
 protected: 
