@@ -33,7 +33,7 @@ Vector::Vector(const Vector &v)
 	this->copiar(v);
 }
 
-const Vector Vector::operator+(const Vector &v)
+Vector Vector::operator+(const Vector &v)
 {
 	// Concatenar uno a continuación del otro. En un nuevo vector:	
 	int total = this->pos + v.pos; // No dejamos elementos vacios

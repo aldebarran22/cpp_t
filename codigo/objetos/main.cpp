@@ -128,6 +128,7 @@ void testSumaVector()
 {
 	Vector v1(10);
 	Vector v2(10);
+	Vector v3(10);
 	
 	int arr1[] = {23, 6,33,44,22};
 	for (int i : arr1){
@@ -139,10 +140,16 @@ void testSumaVector()
 		v2.add(i);
 	}
 	
-	Vector r = v1+v2;
+	int arr3[] = {10,20,30,40,50};
+	for (int i : arr3){
+		v3.add(i);
+	}
+	
+	Vector r = v1+v2+v3;
 	
 	v1.print();
 	v2.print();
+	v3.print();
 	r.print();
 	
 }

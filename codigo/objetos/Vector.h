@@ -21,7 +21,7 @@ class Vector
 		Vector &operator=(const Vector &);
 		
 		// Operador +: concatenar
-		const Vector operator+(const Vector &);	
+		Vector operator+(const Vector &);	
 				
 		
 		bool add(int);
