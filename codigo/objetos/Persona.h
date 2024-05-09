@@ -11,6 +11,7 @@ class Persona
 {
 	friend bool operator==(const Persona &, const Persona &);
 	friend std::ostream & operator<<(std::ostream &, const Persona &);
+	friend std::istream & operator>>(std::istream &, Persona &);
 	
 	private:
 		std::string nombre;

@@ -10,6 +10,7 @@ class Direccion
 {
 	// Funciones friend:
 	friend std::ostream & operator<<(std::ostream &, const Direccion &);
+	friend std::istream & operator>>(std::istream &, Direccion &);
 	
 	// Att. privados
 	std::string calle;

@@ -99,14 +99,23 @@ void testOperadores()
 		
 	} else {
 		std::cout << " son distintos " << std::endl;
-	}
+	}	
+}
+
+void testLeerEscribir()
+{
+	Direccion dir;
 	
+	std::cout << "Teclear los datos de la direccion:";
+	std::cin >> dir;
+	std::cout << "Direccion: " << dir << std::endl;
 }
 
 int main(int argc, char** argv) {
 	//testPersona();
 	//testVector();
 	//testStatic();
-	testOperadores();
+	//testOperadores();
+	testLeerEscribir();
 	return 0;
 }

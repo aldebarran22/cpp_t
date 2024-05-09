@@ -13,8 +13,18 @@ std::ostream & operator<<(std::ostream &os, const Persona &p)
 	return os << p.nombre << " " << p.edad << " " << p.altura << " " << p.dir;
 }
 
+std::istream & operator>>(std::istream &is, Persona &p)
+{
+	return is >> p.nombre >> p.edad >> p.altura >> p.dir;
+}
+
 std::ostream & operator<<(std::ostream &os, const Direccion &dir)
 {
 	return os << dir.calle << " " << dir.numero;
+}
+
+std::istream & operator>>(std::istream &is, Direccion &dir)
+{
+	return is >> dir.calle >> dir.numero;
 }
 
