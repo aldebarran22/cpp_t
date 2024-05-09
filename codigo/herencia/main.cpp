@@ -39,6 +39,11 @@ void pruebasVector(){
 	std::vector<int> numeros = {3,5,6,7,4,2,2};
 	numeros.push_back(100);
 	
+	// Con auto: C++ infiere el tipo destino:
+	for (auto & obj : numeros){ // Recorrer el vector y tomar una ref de cada int:
+		obj *= 10;		
+	}
+	
 	for (int obj : numeros){
 		std::cout << obj << " ";
 	}
@@ -51,15 +56,48 @@ void pruebasVector(){
 		
 		std::cout << nombre << " ";
 	}
-	std::cout  << std::endl;
+	std::cout  << std::endl;	
+}
+
+void vectorEmpleados()
+{
+	std::vector<Empleado *> empleados;
+	
+	empleados.push_back(new Administrativo("Paula","Sanz", 445566, 2500.0, 1000.0, 1000.0));
+	empleados.push_back(new Empleado("Juan", "Gomez", 123343, 2000.0));
+	empleados.push_back(new Director("Eva", "Sanz", 445949, 3000.0, 500.0, 1000.0));
+	empleados.push_back(new JefeProyecto("Miguel", "Hernandez", 1234454, 1500.0, 125.0));
+	
+	for (Empleado *emp : empleados)
+	{
+		std::cout << emp->cv() << std::endl;
+	}
+	
+	for (Empleado  *emp : empleados){
+		delete emp;
+		emp = nullptr;
+	}
 	
 }
 
 
+void pruebasVector2()
+{
+	std::vector<int> numeros;
+	
+	for (int i = 0 ; i < 25 ; i++)
+	{
+		numeros.push_back(i);
+		std::cout << "capacity: " << numeros.capacity() << " size: " << numeros.size() << std::endl;
+	}
+}
+
 int main(int argc, char** argv) {
 	
 	//pruebas();
-	pruebasVector();
+	//pruebasVector();
+	//vectorEmpleados();
+	pruebasVector2();
 	
 	return 0;
 }
