@@ -32,6 +32,25 @@ Vector::Vector(const Vector &v)
 {
 	this->copiar(v);
 }
+
+const Vector Vector::operator+(const Vector &v)
+{
+	// Concatenar uno a continuación del otro. En un nuevo vector:
+	
+	
+	int total = this->pos + v.pos; // No dejamos elementos vacios
+	
+	// Crear un nuevo vector:
+	Vector resul(total);
+	resul.pos = total;
+	
+	// Copiar los elementos de this:
+	std::copy(this->ptr, this->ptr+this->pos, resul.ptr);	
+	
+	// Copiar los elementos de v:
+	std::copy(v.ptr, v.ptr+v.pos, resul.ptr+this->pos);
+	
+}
 	
 Vector & Vector::operator=(const Vector &v)
 {

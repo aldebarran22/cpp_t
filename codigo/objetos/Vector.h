@@ -19,6 +19,9 @@ class Vector
 		// Definir el constructor copia y el operador =
 		Vector(const Vector &);
 		Vector &operator=(const Vector &);
+		
+		// Operador +: concatenar
+		const Vector operator+(const Vector &);	
 				
 		
 		bool add(int);
