@@ -21,6 +21,12 @@
 Director::Director(string nombre, string apellidos, int codigo, double sueldo, double paga, double objetivos):
 Empleado(nombre, apellidos, codigo, sueldo), paga(paga), objetivos(objetivos) {}
 
+
+ostream & operator<<(ostream &os, const Director &d)
+{
+	return os << static_cast<Empleado>(d) << " " << d.paga << " " << d.objetivos;
+}
+
 Director::~Director() {
 
 }

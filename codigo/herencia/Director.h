@@ -7,12 +7,17 @@
 #define _DIRECTOR_H
 
 #include <string>
+#include <iostream>
+
 using namespace std;
 
 #include "Empleado.h"
 
 
 class Director: public Empleado {
+	
+	friend ostream & operator<<(ostream &, const Director &);
+	
 public: 
     
 /**
@@ -24,9 +29,10 @@ public:
  * @param objetivos
  */
 Director(string nombre, string apellidos, int codigo, double sueldo, double paga, double objetivos);
+~Director();
+
 protected: 
     
-~Director();
 private: 
     double paga;
     double objetivos;
