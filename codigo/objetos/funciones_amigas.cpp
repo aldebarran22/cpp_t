@@ -15,7 +15,9 @@ std::ostream & operator<<(std::ostream &os, const Persona &p)
 
 std::istream & operator>>(std::istream &is, Persona &p)
 {
-	return is >> p.nombre >> p.edad >> p.altura >> p.dir;
+	std::getline(is, p.nombre);
+	is >> p.edad >> p.altura >> p.dir;
+	return is;
 }
 
 std::ostream & operator<<(std::ostream &os, const Direccion &dir)
@@ -25,6 +27,8 @@ std::ostream & operator<<(std::ostream &os, const Direccion &dir)
 
 std::istream & operator>>(std::istream &is, Direccion &dir)
 {
-	return is >> dir.calle >> dir.numero;
+	std::getline(is, dir.calle);
+	is >> dir.numero;
+	return is;
 }
 
