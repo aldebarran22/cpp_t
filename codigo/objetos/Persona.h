@@ -26,6 +26,10 @@ class Persona
 		Persona(std::string, int, double, Direccion);
 		Persona(const Persona &);
 		
+		// Operadores de incremento: prefijo y postfijo
+		Persona operator++();   // prefijo
+		Persona operator++(int) // postfijo
+		
 		bool operator<(const Persona &) const;
 		
 		inline std::string getNombre() const { return nombre; }

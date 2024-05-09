@@ -151,7 +151,20 @@ void testSumaVector()
 	v2.print();
 	v3.print();
 	r.print();
+}
+
+void testIncPersona()
+{
+	Direccion dir("Gran Via", 10);	
+	Persona p("Ana",30,1.8, dir);
 	
+	Persona aux = ++p;
+	std::cout << "p: " << p << std::endl;
+	std::cout << "aux: " << aux << std::endl;
+	
+	Persona aux2 = p++;
+	std::cout << "p: " << p << std::endl;
+	std::cout << "aux2: " << aux2 << std::endl;
 }
 
 int main(int argc, char** argv) {
@@ -160,6 +173,7 @@ int main(int argc, char** argv) {
 	//testStatic();
 	//testOperadores();
 	//testLeerEscribir();
-	testSumaVector();
+	//testSumaVector();
+	testIncPersona();
 	return 0;
 }
