@@ -24,6 +24,12 @@ Empleado(nombre, apellidos, codigo, sueldo) {
 	this->paga2 = paga2;
 }
 
+
+ostream & operator<<(ostream &os, const Administrativo &a)
+{
+	return os << "ADM:" << static_cast<Empleado>(a) << " " << a.paga1 << " " << a.paga2;
+}
+
 Administrativo::~Administrativo() {
 
 }

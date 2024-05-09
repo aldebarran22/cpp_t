@@ -24,7 +24,7 @@ Empleado(nombre, apellidos, codigo, sueldo), paga(paga), objetivos(objetivos) {}
 
 ostream & operator<<(ostream &os, const Director &d)
 {
-	return os << static_cast<Empleado>(d) << " " << d.paga << " " << d.objetivos;
+	return os  << "DIR: " << static_cast<Empleado>(d) << " " << d.paga << " " << d.objetivos;
 }
 
 Director::~Director() {

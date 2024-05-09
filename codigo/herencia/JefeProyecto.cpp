@@ -22,6 +22,12 @@ Empleado(nombre, apellidos, codigo, sueldo), incentivos(incentivos) {
 
 }
 
+ostream & operator<<(ostream &os, const JefeProyecto &jf)
+{
+	return os << "JF: " << static_cast<Empleado>(jf) << " " << jf.incentivos;
+}
+
+
 JefeProyecto::~JefeProyecto() {
 
 }
