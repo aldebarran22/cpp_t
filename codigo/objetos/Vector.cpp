@@ -33,6 +33,8 @@ Vector::Vector(const Vector &v)
 	this->copiar(v);
 }
 
+// CONCATENAR:
+/*
 Vector Vector::operator+(const Vector &v)
 {
 	// Concatenar uno a continuación del otro. En un nuevo vector:	
@@ -49,7 +51,33 @@ Vector Vector::operator+(const Vector &v)
 	std::copy(v.ptr, v.ptr+v.pos, resul.ptr+this->pos);
 	
 	return resul;
+}*/
+
+// SUMAR
+Vector Vector::operator+(const Vector &v)
+{
+	// Calcular el vector que mas posiciones tiene:
+	int maxPos = std::max(this->pos, v.pos);
+	int i1, i2;
 	
+	Vector resul(maxPos);
+	resul.pos = maxPos;
+	
+	// Sumar elemento a elemento
+	for (int i = 0 ; i < maxPos ; i++){
+		if (i >= this->pos)
+			i1 = 0;
+		else
+			i1 = this->ptr[i];
+			
+		if (i >= v.pos)
+			i2 = 0;
+		else
+			i2 = v.ptr[i];
+			
+		resul.ptr[i] = i1 + i2;
+	}
+	return resul;
 }
 	
 Vector & Vector::operator=(const Vector &v)

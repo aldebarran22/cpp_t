@@ -20,7 +20,7 @@ class Vector
 		Vector(const Vector &);
 		Vector &operator=(const Vector &);
 		
-		// Operador +: concatenar
+		// Operador +: concatenar o sumar
 		Vector operator+(const Vector &);	
 				
 		
