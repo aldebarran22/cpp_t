@@ -16,7 +16,11 @@ std::ostream & operator<<(std::ostream &os, const Persona &p)
 std::istream & operator>>(std::istream &is, Persona &p)
 {
 	std::getline(is, p.nombre);
-	is >> p.edad >> p.altura >> p.dir;
+	is >> p.edad;
+	is >> p.altura;
+	//is >> p.dir;
+	std::getline(is, p.dir.calle);
+	is >> p.dir.numero;
 	return is;
 }
 
