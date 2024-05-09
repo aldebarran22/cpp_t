@@ -28,7 +28,7 @@ class Persona
 		
 		// Operadores de incremento: prefijo y postfijo
 		Persona operator++();   // prefijo
-		Persona operator++(int) // postfijo
+		Persona operator++(int); // postfijo
 		
 		bool operator<(const Persona &) const;
 		
