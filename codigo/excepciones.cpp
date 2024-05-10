@@ -40,15 +40,36 @@ void testFuncion(int num)
 	}
 }
 
+void testOtrosTipos(int i)
+{
+	switch(i){
+		case 0:
+			throw 45;
+			
+		case 1:
+			throw "mensaje de error";
+			
+					
+	}
+}
+
 int main(){
 	
 	try {
 		//testVector();
 		//testString();
-		testFuncion(3);
+		//testFuncion(3);
+		
+		testOtrosTipos(1);
 		
 	} catch (std::exception &e){
 		std::cerr << "Error: " << e.what() << std::endl;
+		
+	} catch (int &i){
+		std::cerr << "Error: int " << i << std::endl; 
+		
+	} catch (const char *err){
+		std::cerr << "Error: const char * " << err << std::endl; 
 	}
 	return 0;
 }
