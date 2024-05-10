@@ -36,14 +36,19 @@ void testFuncion(int num)
 		throw std::invalid_argument("El numero debe ser par y mayor que 0");
 		
 	} else {
-		std::cout << "El numero es par..."
+		std::cout << "El numero es par...";
 	}
 }
 
 int main(){
 	
-	#testVector();
-	#testString();
-	testFuncion(3);
+	try {
+		//testVector();
+		//testString();
+		testFuncion(3);
+		
+	} catch (std::exception &e){
+		std::cerr << "Error: " << e.what() << std::endl;
+	}
 	return 0;
 }
