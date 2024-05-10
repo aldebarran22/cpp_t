@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <cstring>
+#include <vector>
 
 #include "Direccion.h"
 #include "Persona.h"
@@ -17,6 +18,11 @@ const char *menor(const char *s1, const char *s2){
 		return s2;
 }
 
+template <class T> std::vector<T> menor(std::vector<T> a, std::vector<T> b)
+{
+	return (a < b) ? a : b;
+}
+
 int main(int argc, char** argv) {
 	Direccion dir("Gran Via");
 	Persona p("Jorge", 32, 1.77, dir);	
@@ -24,6 +30,9 @@ int main(int argc, char** argv) {
 	
 	const char *ptr1 = "Ana";
 	const char *ptr2 = "ana";
+	
+	std::vector<int> v1 = {3,4,5,7};
+	std::vector<int> v2 = {3,4,5,6,3,4};
 
 	
 	std::cout << "menor int: " << menor(34,55) << std::endl;
@@ -31,6 +40,10 @@ int main(int argc, char** argv) {
 	std::cout << "menor Persona: " << menor(p, p2) << std::endl;
 	std::cout << "menor const char *: " << menor(ptr1, ptr2) << std::endl;
 	
+	std::vector<int> min = menor(v1, v2);
+	for (auto i : min)
+		std::cout << i << " ";
+	std::cout << std::endl;
 	
 	return 0;
 }
