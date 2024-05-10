@@ -71,6 +71,7 @@ void testClases(){
 		L1.insertar(i);
 		
 	L1.imprimir();
+	L1.borrarTodos();
 	std::cout << "buscar int 23: " << L1.buscar(23) << std::endl;
 	std::cout << "buscar int  3: " << L1.buscar(3) << std::endl;
 	std::cout << std::endl;
@@ -88,10 +89,12 @@ void testClases(){
 	Lista<Direccion> L3;
 	L3.insertar(Direccion("Calle Uno",1 ));
 	L3.insertar(Direccion("Calle Dos",2 ));
+	L3.borrarTodos();
+	
 	L3.insertar(Direccion("Calle Tres",3 ));
 	L3.imprimir();
 	std::cout << "buscar Dir 1: " << L3.buscar(Direccion("Calle Uno",1)) << std::endl;
-	std::cout << "buscar Otra dir: " << L3.buscar(Direccion("Calle Uno",12)) << std::endl;
+	std::cout << "buscar Otra dir: " << L3.buscar(Direccion("Calle Tres",3)) << std::endl;
 	std::cout << std::endl;
 
 }
