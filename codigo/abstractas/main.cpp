@@ -8,6 +8,7 @@
 #include "Cilindro.h"
 
 #include <iostream>
+#include <typeinfo>
 
 
 
@@ -24,6 +25,10 @@ int main(int argc, char** argv) {
 	
 	for (Figura *f : figuras){
 		f->visualizar();
+		const std::type_info &info = typeid(f);  // El nombre de la superclase: Figura
+		//const std::type_info &info = typeid(*f);	// El nombre de la clase instanciada: 
+		std::cout << "nombre: " << info.name() << std::endl;
+		std::cout << std::endl;
 	}
 	
 	for (Figura *f : figuras){
