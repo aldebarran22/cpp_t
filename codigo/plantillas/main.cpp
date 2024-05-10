@@ -7,6 +7,15 @@
 #include "Persona.h"
 
 
+/*
+int *reservar(int n){
+	return new int[n];
+}*/
+
+template <class T> T *reservar(int n){
+	return new T[n];
+}
+
 template <class T> T menor(T a, T b){
 	return (a < b) ? a : b;
 }
@@ -31,8 +40,8 @@ int main(int argc, char** argv) {
 	const char *ptr1 = "Ana";
 	const char *ptr2 = "ana";
 	
-	std::vector<int> v1 = {3,4,5,7};
-	std::vector<int> v2 = {3,4,5,6,3,4};
+	std::vector<int> v1 = {3,4,5,6,11};
+    std::vector<int> v2 = {7,8,9,10,10};
 
 	
 	std::cout << "menor int: " << menor(34,55) << std::endl;
@@ -44,6 +53,10 @@ int main(int argc, char** argv) {
 	for (auto i : min)
 		std::cout << i << " ";
 	std::cout << std::endl;
+	
+	int *ptr = reservar<int>(10);
+	std::cout << ptr << std::endl;
+	delete ptr;
 	
 	return 0;
 }
