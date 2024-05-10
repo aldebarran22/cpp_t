@@ -4,6 +4,11 @@ DateTime::DateTime(int dd, int mm, int yy, int H, int M, int S): Date(dd,mm,yy),
 {
 }
 
+string DateTime::toString() const
+{
+	return Date::toString() + " " + Time::toString();
+}
+
 DateTime::~DateTime()
 {
 }
