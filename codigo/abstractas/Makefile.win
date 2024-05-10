@@ -1,0 +1,49 @@
+# Project: abstractas
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = main.o Cilindro.o Cuadrado.o Cubo.o Figura.o Figura2D.o Figura3D.o Triangulo.o
+LINKOBJ  = main.o Cilindro.o Cuadrado.o Cubo.o Figura.o Figura2D.o Figura3D.o Triangulo.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -lgdi32 -lcomdlg32
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = abstractas.exe
+CXXFLAGS = $(CXXINCS) -std=c++11
+CFLAGS   = $(INCS) -std=c++11
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+Cilindro.o: Cilindro.cpp
+	$(CPP) -c Cilindro.cpp -o Cilindro.o $(CXXFLAGS)
+
+Cuadrado.o: Cuadrado.cpp
+	$(CPP) -c Cuadrado.cpp -o Cuadrado.o $(CXXFLAGS)
+
+Cubo.o: Cubo.cpp
+	$(CPP) -c Cubo.cpp -o Cubo.o $(CXXFLAGS)
+
+Figura.o: Figura.cpp
+	$(CPP) -c Figura.cpp -o Figura.o $(CXXFLAGS)
+
+Figura2D.o: Figura2D.cpp
+	$(CPP) -c Figura2D.cpp -o Figura2D.o $(CXXFLAGS)
+
+Figura3D.o: Figura3D.cpp
+	$(CPP) -c Figura3D.cpp -o Figura3D.o $(CXXFLAGS)
+
+Triangulo.o: Triangulo.cpp
+	$(CPP) -c Triangulo.cpp -o Triangulo.o $(CXXFLAGS)
