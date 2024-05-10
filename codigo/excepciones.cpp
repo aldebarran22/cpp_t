@@ -29,9 +29,21 @@ void testString(){
 	}
 }
 
+void testFuncion(int num)
+{
+	if (num < 0 || num % 2 != 0)
+	{
+		throw std::invalid_argument("El numero debe ser par y mayor que 0");
+		
+	} else {
+		std::cout << "El numero es par..."
+	}
+}
+
 int main(){
 	
-	testVector();
-	testString();
+	#testVector();
+	#testString();
+	testFuncion(3);
 	return 0;
 }
