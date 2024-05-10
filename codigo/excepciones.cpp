@@ -17,8 +17,21 @@ void testVector(){
 	}
 }
 
+void testString(){
+	std::string frase = "Cadena";
+	
+	try {
+		std::cout << "Vector []: " << frase[30] << std::endl;
+		std::cout << "Vector at: " << frase.at(30) << std::endl;
+
+	} catch (std::exception &e){
+		std::cerr << "Error: " << e.what() << std::endl;
+	}
+}
+
 int main(){
 	
 	testVector();
+	testString();
 	return 0;
 }
