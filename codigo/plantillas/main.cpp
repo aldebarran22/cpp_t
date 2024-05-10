@@ -5,6 +5,7 @@
 
 #include "Direccion.h"
 #include "Persona.h"
+#include "Lista.h"
 
 
 /*
@@ -32,7 +33,7 @@ template <class T> std::vector<T> menor(std::vector<T> a, std::vector<T> b)
 	return (a < b) ? a : b;
 }
 
-int main(int argc, char** argv) {
+void testFunciones(){
 	Direccion dir("Gran Via");
 	Persona p("Jorge", 32, 1.77, dir);	
 	Persona p2("Ana", 33, 1.77, dir);
@@ -61,7 +62,19 @@ int main(int argc, char** argv) {
 	double *ptr3 = reservar<double>(10);
 	std::cout << "ptr double: " << ptr3 << std::endl;
 	delete ptr3;
-		
+}
+
+void testClases(){
+	Lista<int> L1;
 	
+	for (int i = 1 ; i <= 10 ; i++)
+		L1.insertar(i);
+		
+	L1.imprimir();
+}
+
+int main(int argc, char** argv) {
+	// testFunciones();
+	testClases();
 	return 0;
 }
