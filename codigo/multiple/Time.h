@@ -39,9 +39,9 @@ public:
 	int getMM() const { return mm; }
 	int getSS() const { return ss; }
 
-	void setHH(int HH){ this->hh = HH; }
-	void setMM(int MM){ this->mm = MM; }
-	void setSS(int SS){ this->ss = SS; }
+	void setHH(int HH);
+	void setMM(int MM);
+	void setSS(int SS); 
 
 	double toHoras() const;
 	long toSegundos() const;

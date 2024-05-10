@@ -47,6 +47,29 @@ Time::Time(double horas){
 	this->ajustar();
 }
 
+void Time::setHH(int HH){
+	
+	if (HH < 0 || HH > 23) 
+		throw TimeException("Las horas: "+std::to_string(HH) + " no son correctas" );   
+	else
+		this->hh = HH; 
+}
+
+void Time::setMM(int MM){
+	
+	if (MM < 0 || MM > 59) 
+		throw TimeException("Los minutos: "+std::to_string(MM) + " no son correctos" );   
+	else
+		this->mm = MM; 
+}
+
+void Time::setSS(int SS){
+	
+	if (SS < 0 || SS > 59) 
+		throw TimeException("Los segundos: "+std::to_string(SS) + " no son correctos" );   
+	else
+		this->ss = SS; 
+}
 
 void Time::repartir(double horas){
 	double auxm, auxs;
