@@ -14,5 +14,21 @@
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main(int argc, char** argv) {
+	//Figura f; No se puede instanciar, es una clase abstracta!!
+	Figura *figuras[4];	
+	
+	figuras[0] = new Cubo(5.0);
+	figuras[1] = new Cuadrado(4.5);
+	figuras[2] = new Triangulo(5.0, 5.0);
+	figuras[3] = new Cilindro(4.0, 6.5);
+	
+	for (Figura *f : figuras){
+		f->visualizar();
+	}
+	
+	for (Figura *f : figuras){
+		delete f;
+	}
+	
 	return 0;
 }
