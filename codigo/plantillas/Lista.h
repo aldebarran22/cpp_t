@@ -32,6 +32,7 @@ template <class T> class Lista
 		Lista();
 		void insertar(T);
 		void imprimir();
+		bool buscar(T);
 		~Lista();
 	protected:
 };
@@ -56,6 +57,18 @@ template <class T> void Lista<T>::imprimir(){
 		aux = aux->getSig(); // Avanzar al siguiente nodo.
 	}
 	std::cout << std::endl;
+}
+
+template <class T> bool Lista<T>::buscar(T dato){
+	Nodo *aux = this->lista;
+	
+	while (aux != nullptr){
+		if  (aux->getDato() == dato)
+			return true;
+		
+		aux = aux->getSig(); // Avanzar al siguiente nodo.
+	}
+	return false;
 }
 
 template <class T> Lista<T>::~Lista(){}

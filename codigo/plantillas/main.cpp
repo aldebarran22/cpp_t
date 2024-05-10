@@ -71,15 +71,19 @@ void testClases(){
 		L1.insertar(i);
 		
 	L1.imprimir();
-	
+		
 	Lista<std::string> L2;
 	L2.insertar("Roberto");
 	L2.insertar("Luis");
 	L2.insertar("Sandra");
-	L2.insertar("Ana");
-	
+	L2.insertar("Ana");	
 	L2.imprimir();
 	
+	Lista<Direccion> L3;
+	L3.insertar(Direccion("Calle Uno",1 ));
+	L3.insertar(Direccion("Calle Dos",2 ));
+	L3.insertar(Direccion("Calle Tres",3 ));
+	L3.imprimir();
 }
 
 int main(int argc, char** argv) {
