@@ -1,6 +1,8 @@
 #ifndef LISTA_H
 #define LISTA_H
 
+#include <stdexcept>
+
 template <class T> class Lista
 {
 	private:
@@ -33,6 +35,7 @@ template <class T> class Lista
 		void insertar(T);
 		void imprimir();
 		bool buscar(T);
+		T get(int);
 		void borrarTodos();
 		~Lista();
 	protected:
@@ -82,6 +85,21 @@ template <class T> void Lista<T>::borrarTodos(){
 		delete aux;
 		aux = nullptr;
 	}
+}
+
+template <class T> T Lista<T>::get(int pos){
+	Nodo *aux = this->lista;
+	int i=0;
+	
+	while (aux != nullptr && i < pos){
+		aux = aux->getSig();
+		i++;
+	}
+	
+	if (aux != nullptr)
+		return aux->getDato();
+	else 
+		throw std::out_of_range("Posicion "+std::to_string(pos) + " fuera de rango");
 }
 
 template <class T> Lista<T>::~Lista(){

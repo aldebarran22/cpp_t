@@ -86,6 +86,18 @@ void testClases(){
 	std::cout << "buscar string Sandra: " << L2.buscar("Sandra") << std::endl;
 	std::cout << std::endl;
 	
+	try {
+		std::string nom1 = L2.get(3);
+		std::cout << "nom1: " << nom1 << std::endl;
+		
+		std::string nom2 = L2.get(30);
+		std::cout << "nom2: " << nom2 << std::endl;
+		
+	} catch (std::out_of_range &e){
+		std::cout << e.what() << std::endl;	
+	}
+	
+	
 	Lista<Direccion> L3;
 	L3.insertar(Direccion("Calle Uno",1 ));
 	L3.insertar(Direccion("Calle Dos",2 ));
