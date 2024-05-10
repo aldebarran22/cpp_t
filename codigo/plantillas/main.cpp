@@ -71,6 +71,9 @@ void testClases(){
 		L1.insertar(i);
 		
 	L1.imprimir();
+	std::cout << "buscar int 23: " << L1.buscar(23) << std::endl;
+	std::cout << "buscar int  3: " << L1.buscar(3) << std::endl;
+	std::cout << std::endl;
 		
 	Lista<std::string> L2;
 	L2.insertar("Roberto");
@@ -78,12 +81,19 @@ void testClases(){
 	L2.insertar("Sandra");
 	L2.insertar("Ana");	
 	L2.imprimir();
+	std::cout << "buscar string sandra: " << L2.buscar("sandra") << std::endl;
+	std::cout << "buscar string Sandra: " << L2.buscar("Sandra") << std::endl;
+	std::cout << std::endl;
 	
 	Lista<Direccion> L3;
 	L3.insertar(Direccion("Calle Uno",1 ));
 	L3.insertar(Direccion("Calle Dos",2 ));
 	L3.insertar(Direccion("Calle Tres",3 ));
 	L3.imprimir();
+	std::cout << "buscar Dir 1: " << L3.buscar(Direccion("Calle Uno",1)) << std::endl;
+	std::cout << "buscar Otra dir: " << L3.buscar(Direccion("Calle Uno",12)) << std::endl;
+	std::cout << std::endl;
+
 }
 
 int main(int argc, char** argv) {
