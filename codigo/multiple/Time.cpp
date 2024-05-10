@@ -3,6 +3,7 @@
 //////////////////////////////////////////////////////////////////////
 
 #include "Time.h"
+#include "TimeException.h"
 
 //////////////////////////////////////////////////////////////////////
 // Construction/Destruction
@@ -21,11 +22,24 @@ Time::Time(long segundos){
 }
 
 Time::Time(int hh, int mm, int ss){
+	
+	if (hh < 0 || hh > 23){
+		throw TimeException("Las horas "+std::to_string(hh) + " no son correctas");
+	}
+	
+	if (mm < 0 || mm > 59){
+		throw TimeException("Los minutos "+std::to_string(mm) + " no son correctos");
+	}
+	
+	if (ss < 0 || ss > 59){
+		throw TimeException("Los segundos "+std::to_string(ss) + " no son correctos");
+	}
+	
 	this->hh = hh;
 	this->mm = mm;
 	this->ss = ss;
 
-	this->ajustar();
+	//this->ajustar();
 }
 
 Time::Time(double horas){
