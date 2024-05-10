@@ -17,7 +17,7 @@ private:
 public:
 	Date();
 	Date(int, int, int);
-	string toString() const;
+	virtual string toString() const;
 	virtual ~Date();
 
 };

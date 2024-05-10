@@ -1,7 +1,10 @@
 #include <iostream>
 
-/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+#include "DateTime.h"
+
 
 int main(int argc, char** argv) {
+	DateTime dt(18, 7, 20, 10, 5, 2024);
+	std::cout << "DT: " << dt.toString() << std::endl;
 	return 0;
 }
