@@ -49,7 +49,8 @@ void testOtrosTipos(int i)
 		case 1:
 			throw "mensaje de error";
 			
-					
+		case 2:
+			throw 23.55;								
 	}
 }
 
@@ -60,7 +61,7 @@ int main(){
 		//testString();
 		//testFuncion(3);
 		
-		testOtrosTipos(1);
+		testOtrosTipos(2);
 		
 	} catch (std::exception &e){
 		std::cerr << "Error: " << e.what() << std::endl;
@@ -70,6 +71,9 @@ int main(){
 		
 	} catch (const char *err){
 		std::cerr << "Error: const char * " << err << std::endl; 
+		
+	} catch (...){
+		std::cerr << "Error: ..." << std::endl; 
 	}
 	return 0;
 }
