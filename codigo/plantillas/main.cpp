@@ -55,8 +55,12 @@ int main(int argc, char** argv) {
 	std::cout << std::endl;
 	
 	int *ptr = reservar<int>(10);
-	std::cout << ptr << std::endl;
+	std::cout << "ptr int: " << ptr << std::endl;
 	delete ptr;
+	
+	double *ptr3 = reservar<double>(10);
+	std::cout << "ptr double: " << ptr3 << std::endl;
+	delete ptr3;
 	
 	return 0;
 }
