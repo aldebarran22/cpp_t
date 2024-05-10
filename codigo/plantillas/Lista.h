@@ -52,9 +52,10 @@ template <class T> void Lista<T>::imprimir(){
 	Nodo *aux = this->lista;
 	
 	while (aux != nullptr){
-		std::cout << aux->getDato() << std::endl;
+		std::cout << aux->getDato() << " ";
 		aux = aux->getSig(); // Avanzar al siguiente nodo.
 	}
+	std::cout << std::endl;
 }
 
 template <class T> Lista<T>::~Lista(){}

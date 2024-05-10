@@ -71,6 +71,15 @@ void testClases(){
 		L1.insertar(i);
 		
 	L1.imprimir();
+	
+	Lista<std::string> L2;
+	L2.insertar("Roberto");
+	L2.insertar("Luis");
+	L2.insertar("Sandra");
+	L2.insertar("Ana");
+	
+	L2.imprimir();
+	
 }
 
 int main(int argc, char** argv) {
