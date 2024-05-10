@@ -33,6 +33,7 @@ template <class T> class Lista
 		void insertar(T);
 		void imprimir();
 		bool buscar(T);
+		void borrarTodos();
 		~Lista();
 	protected:
 };
@@ -71,5 +72,19 @@ template <class T> bool Lista<T>::buscar(T dato){
 	return false;
 }
 
-template <class T> Lista<T>::~Lista(){}
+template <class T> void Lista<T>::borrarTodos(){
+	Nodo *aux;
+	
+	while (this->lista != nullptr){
+		aux = this->lista;
+		this->lista = aux->getSig();
+		
+		delete aux;
+		aux = nullptr;
+	}
+}
+
+template <class T> Lista<T>::~Lista(){
+	this->borrarTodos();
+}
 
