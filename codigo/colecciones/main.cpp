@@ -4,6 +4,7 @@
 #include <string>
 #include <iostream>
 #include <sstream>
+#include <fstream>
 #include <cstdlib>
 #include <ctime>
 
@@ -78,6 +79,7 @@ void testConversiones(){
 }
 
 void testsstream(){
+	
 	std::string cad = "nombre;apellidos;edad;altura";
 	std::string col;
 	
@@ -100,14 +102,42 @@ void testsstream(){
 	std::cout << "csv2: " << csv2 << std::endl;
 }
 
+void mapaIdioma(std::string idioma){
+	// Cargar un fichero de idioma en un mapa.
+	std::string fila, clave, valor;
+	std::ifstream fin;
+	int pos;
+	std::string path = "..\\idiomas\\diccionario_"+idioma+".txt";
+	
+	std::cout << "Cargando fichero: " << path << std::endl;
+	
+	// Abrir el fichero para leer:
+	fin.open(path, std::ios::in);	
+	
+	while (std::getline(fin, fila)){
+		pos = fila.find("=");
+		clave = fila.substr(0, pos);
+		valor = fila.substr(pos+1);
+		
+		std::cout << fila << " pos: " << pos << std::endl;
+		std::cout << "Clave: " << clave << " valor: " << valor << std::endl;
+		
+	}
+	
+	fin.close();
+}
+
+
 int main(){
 	
 	std::srand(std::time(nullptr));
 	
 	//testMapa();
-	testMatriz();
+	//testMatriz();
 	//testConversiones();
 	//testsstream();
+	
+	mapaIdioma("es");
 	return 0;
 }
 
