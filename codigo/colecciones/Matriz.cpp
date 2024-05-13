@@ -19,6 +19,15 @@ Matriz::Matriz(int filas, int cols)
 	}
 }
 
+std::string Matriz::to_string(int sep){
+	
+	for (std::vector<int> fila : this->matriz){
+		std::string fila_csv = "";
+		
+		for (int num : fila){
+			
+}
+
 void Matriz::print()
 {
 	for (std::vector<int> fila : this->matriz){

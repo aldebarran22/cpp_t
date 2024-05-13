@@ -52,8 +52,23 @@ void testMapa(){
 
 void testMatriz(){
 	Matriz m1;
+	Matriz m2(5,5);
 	
 	m1.print();	
+	std::cout << std::endl;
+	m2.print();
+}
+
+void testConversiones(){
+	// Convertir de int a string y de string a int:
+	int numero, numero2;
+	std::string snumero;
+	
+	numero = 1234;
+	snumero = std::to_string(numero);
+	numero2 = std::stoi(snumero);
+	
+	std::cout << "numero: " << numero << " snumero: " << snumero << " numero2: " << numero2 << std::endl; 
 }
 
 int main(){
@@ -61,7 +76,8 @@ int main(){
 	std::srand(std::time(nullptr));
 	
 	//testMapa();
-	testMatriz();
+	//testMatriz();
+	testConversiones();
 	return 0;
 }
 
