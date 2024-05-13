@@ -3,6 +3,10 @@
 #include <map>
 #include <string>
 #include <iostream>
+#include <cstdlib>
+#include <ctime>
+
+#include "Matriz.h"
 
 
 void testMapa(){
@@ -46,8 +50,18 @@ void testMapa(){
 	
 }
 
+void testMatriz(){
+	Matriz m1;
+	
+	m1.print();	
+}
+
 int main(){
-	testMapa();
+	
+	std::srand(std::time(nullptr));
+	
+	//testMapa();
+	testMatriz();
 	return 0;
 }
 
