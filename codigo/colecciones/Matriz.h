@@ -14,6 +14,7 @@ class Matriz
 		void print();
 		std::string to_string(char=';');
 		void saveCSV(std::string, char=';');
+		static Matriz loadCSV(std::string, char=';');
 		~Matriz();
 	protected:
 };

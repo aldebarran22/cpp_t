@@ -63,6 +63,9 @@ void testMatriz(){
 	std::cout << std::endl << m2.to_string() << std::endl;
 	
 	m1.saveCSV("matriz1.csv");
+	
+	std::cout <<"Contenido del fichero: matriz1.csv" << std::endl;
+	m1 = Matriz::loadCSV("matriz1.csv");
 }
 
 void testConversiones(){

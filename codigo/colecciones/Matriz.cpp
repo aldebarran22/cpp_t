@@ -48,10 +48,28 @@ void Matriz::print()
 	}
 }
 
+Matriz Matriz::loadCSV(std::string path, char sep)
+{
+	std::string filaCSV;
+	std::ifstream fin;
+	
+	// Abrir el fichero para leer:
+	fin.open(path, std::ios::in);	
+	
+	while (std::getline(fin, filaCSV)){
+		std::cout << filaCSV << std::endl;
+	}
+	
+	fin.close();
+	
+	return Matriz(5,5);
+}
+
 void Matriz::saveCSV(std::string path, char sep)
 {
 	std::string filaCSV;
 	std::ofstream fout;
+	int i=0;
 	
 	// Abrir el fichero para grabar:
 	fout.open(path, std::ios::out);	
@@ -60,8 +78,14 @@ void Matriz::saveCSV(std::string path, char sep)
 	for (std::vector<int> fila : this->matriz){
 		filaCSV = join(fila, sep);
 		
+		i++;
+		
 		// Escribir la fila en un fichero:
-		fout << filaCSV << std::endl;
+		fout << filaCSV;
+		
+		if (i < this->filas-1)
+			fout << std::endl;
+		
 	}
 	
 	fout.close();	
