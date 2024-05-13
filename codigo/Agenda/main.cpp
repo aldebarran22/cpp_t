@@ -115,6 +115,7 @@ void pruebaAgenda()
 	agenda.addEvento(Date(20,7,2017), Hora(9), "Clase C++");
 	agenda.addEvento(Date(20,7,2017), Hora(14), "Comida");
 	agenda.addEvento(Date(21,7,2017), Hora(9), "Clase C++");
+	agenda.addEvento(Date(21,7,2017), Hora(9), "Clase Python");
 	agenda.println();
 }
 

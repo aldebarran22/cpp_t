@@ -32,8 +32,8 @@ void testTime(){
 }
 
 void testDate(){
-	Date f1(13,5,2024);
-	Date f2(20,5,2024);
+	Date f1(13,5,2024);  // 20240513
+	Date f2(20,5,2024);  // 20240520
 	std::map<Date, std::string> mapa;
 	
 	mapa[f1] = "Clase C++";
