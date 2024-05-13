@@ -5,6 +5,7 @@
 #include <iostream>
 #include <sstream>
 #include <fstream>
+#include <stdexcept>
 #include <cstdlib>
 #include <ctime>
 
@@ -104,6 +105,9 @@ void testsstream(){
 
 void mapaIdioma(std::string idioma){
 	// Cargar un fichero de idioma en un mapa.
+	std::map<std::string, std::string> mapa;
+	std::map<std::string, std::string>::iterator it;
+	
 	std::string fila, clave, valor;
 	std::ifstream fin;
 	int pos;
@@ -112,19 +116,27 @@ void mapaIdioma(std::string idioma){
 	std::cout << "Cargando fichero: " << path << std::endl;
 	
 	// Abrir el fichero para leer:
-	fin.open(path, std::ios::in);	
+	fin.open(path, std::ios::in);
+	if (fin == false){
+		throw std::invalid_argument("El fichero: "+path+" no existe");
+	}	
 	
 	while (std::getline(fin, fila)){
 		pos = fila.find("=");
 		clave = fila.substr(0, pos);
 		valor = fila.substr(pos+1);
+		mapa[clave] = valor;
 		
-		std::cout << fila << " pos: " << pos << std::endl;
-		std::cout << "Clave: " << clave << " valor: " << valor << std::endl;
-		
+		//std::cout << fila << " pos: " << pos << std::endl;
+		//std::cout << "Clave: " << clave << " valor: " << valor << std::endl;		
 	}
 	
 	fin.close();
+	
+	// Recorrer el mapa:
+	for (it = mapa.begin(); it != mapa.end(); it++){
+		std::cout << it->first << " " << it->second << std::endl;
+	}
 }
 
 
@@ -137,7 +149,12 @@ int main(){
 	//testConversiones();
 	//testsstream();
 	
-	mapaIdioma("es");
+	try {
+		mapaIdioma("it");
+	} catch (std::invalid_argument &e){
+		std::cerr << "ERROR: " << e.what() << std::endl;
+	}
+	
 	return 0;
 }
 
