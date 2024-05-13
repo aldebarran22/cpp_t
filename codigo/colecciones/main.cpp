@@ -7,6 +7,7 @@
 #include <cstdlib>
 #include <ctime>
 
+#include "funciones.h"
 #include "Matriz.h"
 
 
@@ -82,6 +83,16 @@ void testsstream(){
 	
 	while (std::getline(is, col, ';'))
 		std::cout << col << std::endl;
+		
+		
+	std::string csv = "123;44;55;22;11;77";
+	std::vector<int> numeros = split(csv);
+	
+	std::cout << "csv: " << csv << std::endl;
+	for (int i : numeros)
+		std::cout << i << "\t";
+		
+	std::cout << std::endl;
 }
 
 int main(){
