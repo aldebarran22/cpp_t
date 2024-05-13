@@ -3,6 +3,7 @@
 #include <map>
 #include <string>
 #include <iostream>
+#include <sstream>
 #include <cstdlib>
 #include <ctime>
 
@@ -73,13 +74,24 @@ void testConversiones(){
 	std::cout << "numero: " << numero << " snumero: " << snumero << " numero2: " << numero2 << std::endl; 
 }
 
+void testsstream(){
+	std::string cad = "nombre;apellidos;edad;altura";
+	std::string col;
+	
+	std::istringstream is(cad);
+	
+	while (std::getline(is, col, ';'))
+		std::cout << col << std::endl;
+}
+
 int main(){
 	
 	std::srand(std::time(nullptr));
 	
 	//testMapa();
-	testMatriz();
+	//testMatriz();
 	//testConversiones();
+	testsstream();
 	return 0;
 }
 

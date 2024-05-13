@@ -1,0 +1,6 @@
+iostream --> flujos de entrada / salida (consola)
+
+sstream --> string stream (procesar cadenas)
+  istringstream: flujo de entrada de cadenas de texto
+
+fstream --> file stream (procesar ficheros)

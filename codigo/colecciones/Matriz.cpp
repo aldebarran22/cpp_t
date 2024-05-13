@@ -31,8 +31,7 @@ std::string Matriz::to_string(char sep)
 		
 		// No se pone el salto de linea en la ultima fila
 		if (i < this->filas-1)
-			csv += "\n"; 
-		
+			csv += "\n"; 		
 	}
 	
 	return csv;
