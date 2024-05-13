@@ -14,6 +14,10 @@ void testMapa(){
 	
 	//std::make_pair
 	
+	// Solo inserta si no existe: tampoco machaca la clave
+	auto par = mapa.insert({121, "Jorge2"});	 
+	
+	
 	// Recorrido con el iterador:
 	for (it = mapa.begin(); it != mapa.end(); it++){
 		std::cout << it->first << " " << it->second << std::endl;
@@ -23,7 +27,7 @@ void testMapa(){
 	// Buscar por la clave, utilizando el metodo find:
 	
 	int numero = 200;
-	std::cout << "Buscar: " << numero << std::endl;	
+	std::cout << "\nBuscar: " << numero << std::endl;	
 	it = mapa.find(numero);
 	
 	if (it == mapa.end()){
