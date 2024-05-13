@@ -150,7 +150,7 @@ int main(){
 	//testsstream();
 	
 	try {
-		mapaIdioma("it");
+		mapaIdioma("es");
 	} catch (std::invalid_argument &e){
 		std::cerr << "ERROR: " << e.what() << std::endl;
 	}

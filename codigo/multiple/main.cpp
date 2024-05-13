@@ -1,5 +1,5 @@
 #include <iostream>
-
+#include <map>
 
 #include "Time.h"
 #include "TimeException.h"
@@ -31,7 +31,19 @@ void testTime(){
 	}		
 }
 
+void testDate(){
+	Date f1(13,5,2024);
+	Date f2(20,5,2024);
+	std::map<Date, std::string> mapa;
+	
+	mapa[f1] = "Clase C++";
+	
+	
+	
+}
+
 int main(int argc, char** argv) {
-	testTime();
+	//testTime();
+	testDate();
 	return 0;
 }
