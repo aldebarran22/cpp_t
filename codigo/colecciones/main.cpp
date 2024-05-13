@@ -93,6 +93,9 @@ void testsstream(){
 		std::cout << i << "\t";
 		
 	std::cout << std::endl;
+	
+	std::string csv2 = join(numeros);
+	std::cout << "csv2: " << csv2 << std::endl;
 }
 
 int main(){
@@ -100,9 +103,9 @@ int main(){
 	std::srand(std::time(nullptr));
 	
 	//testMapa();
-	//testMatriz();
+	testMatriz();
 	//testConversiones();
-	testsstream();
+	//testsstream();
 	return 0;
 }
 

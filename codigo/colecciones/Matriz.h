@@ -13,6 +13,7 @@ class Matriz
 		Matriz(int=10, int=10);
 		void print();
 		std::string to_string(char=';');
+		void saveCSV(std::string, char=';');
 		~Matriz();
 	protected:
 };

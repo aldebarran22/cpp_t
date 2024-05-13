@@ -47,6 +47,17 @@ void Matriz::print()
 	}
 }
 
+void Matriz::saveCSV(std::string path, char sep)
+{
+	std::string filaCSV;
+	
+	// Graba la matriz en un fichero con formato CSV:
+	for (std::vector<int> fila : this->matriz){
+		filaCSV = join(fila, sep);
+		std::cout << filaCSV << std::endl;
+	}	
+}
+
 Matriz::~Matriz()
 {
 }
