@@ -12,6 +12,7 @@ class Matriz
 	public:
 		Matriz(int=10, int=10);
 		void print();
+		void addFila(std::vector<int>);
 		std::string to_string(char=';');
 		void saveCSV(std::string, char=';');
 		static Matriz loadCSV(std::string, char=';');

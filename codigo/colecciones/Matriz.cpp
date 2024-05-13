@@ -48,8 +48,18 @@ void Matriz::print()
 	}
 }
 
+void Matriz::addFila(std::vector<int> fila)
+{
+	this->matriz.push_back(fila);
+	this->filas++;
+	this->cols = fila.size();
+}
+
 Matriz Matriz::loadCSV(std::string path, char sep)
 {
+	Matriz m(0,0);
+	std::vector<int> fila;
+	
 	std::string filaCSV;
 	std::ifstream fin;
 	
@@ -57,12 +67,13 @@ Matriz Matriz::loadCSV(std::string path, char sep)
 	fin.open(path, std::ios::in);	
 	
 	while (std::getline(fin, filaCSV)){
-		std::cout << filaCSV << std::endl;
+		fila = split(filaCSV, sep);
+		m.addFila(fila);					
 	}
 	
 	fin.close();
 	
-	return Matriz(5,5);
+	return m;
 }
 
 void Matriz::saveCSV(std::string path, char sep)
