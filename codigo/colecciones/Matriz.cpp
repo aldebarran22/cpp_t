@@ -1,6 +1,7 @@
 #include "Matriz.h"
 
 #include <iostream>
+#include <iomanip>
 #include <cstdlib>
 
 Matriz::Matriz(int filas, int cols)
@@ -22,7 +23,7 @@ void Matriz::print()
 {
 	for (std::vector<int> fila : this->matriz){
 		for (int num : fila){
-			std::cout << num << "\t";
+			std::cout << std::setw(2) << num << "\t";
 		}
 		std::cout << std::endl;
 	}
