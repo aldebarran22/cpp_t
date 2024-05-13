@@ -1,3 +1,4 @@
+#include <sstream>
 
 #include "funciones.h"
 
@@ -19,5 +20,15 @@ std::string join(std::vector<int> tokens, char sep)
 
 std::vector<int> split(std::string cad, char sep)
 {
+	std::vector<int> numeros;
+	std::istringstream is(cad);
+	std::string snum;
+	int numero;
 	
+	while (std::getline(is, snum, sep)){
+		numero = std::stoi(snum);
+		numeros.push_back(numero);
+	}
+	return numeros;
+		
 }
