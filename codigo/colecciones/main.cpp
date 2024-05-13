@@ -61,6 +61,8 @@ void testMatriz(){
 	m2.print();
 	
 	std::cout << std::endl << m2.to_string() << std::endl;
+	
+	m1.saveCSV("matriz1.csv");
 }
 
 void testConversiones(){

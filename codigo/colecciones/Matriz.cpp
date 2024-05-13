@@ -1,6 +1,7 @@
 #include <iostream>
 #include <iomanip>
 #include <cstdlib>
+#include <fstream>
 
 #include "Matriz.h"
 #include "funciones.h"
@@ -50,12 +51,20 @@ void Matriz::print()
 void Matriz::saveCSV(std::string path, char sep)
 {
 	std::string filaCSV;
+	std::ofstream fout;
+	
+	// Abrir el fichero para grabar:
+	fout.open(path, std::ios::out);	
 	
 	// Graba la matriz en un fichero con formato CSV:
 	for (std::vector<int> fila : this->matriz){
 		filaCSV = join(fila, sep);
-		std::cout << filaCSV << std::endl;
-	}	
+		
+		// Escribir la fila en un fichero:
+		fout << filaCSV << std::endl;
+	}
+	
+	fout.close();	
 }
 
 Matriz::~Matriz()

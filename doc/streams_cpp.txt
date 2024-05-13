@@ -4,3 +4,24 @@ sstream --> string stream (procesar cadenas)
   istringstream: flujo de entrada de cadenas de texto
 
 fstream --> file stream (procesar ficheros)
+
+
+
+////////////////////////////////////////////
+
+ficheros de datos
+100nombre1........apellido1.....XX  --> 50 bytes   0
+200nombre2........apellido2.....XX  --> 50 bytes   50
+300nombre3........apellido3.....XX  --> 50 bytes   99
+
+fichero de indices: 
+100 -> 0
+200 -> 50
+300 -> 99
+
+Ficheros de texto:
+lineaEOL  -> end of line
+linea2EOL
+EOF end of file
+
+
