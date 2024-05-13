@@ -53,19 +53,16 @@ void testMapa(){
 }
 
 void testMatriz(){
-	Matriz m1;
-	Matriz m2(5,5);
-	
+	Matriz m1, m2;
+
 	m1.print();	
-	std::cout << std::endl;
-	m2.print();
-	
-	std::cout << std::endl << m2.to_string() << std::endl;
+	std::cout << std::endl;		
 	
 	m1.saveCSV("matriz1.csv");
 	
 	std::cout <<"Contenido del fichero: matriz1.csv" << std::endl;
-	m1 = Matriz::loadCSV("matriz1.csv");
+	m2 = Matriz::loadCSV("matriz1.csv");
+	m2.print();
 }
 
 void testConversiones(){
