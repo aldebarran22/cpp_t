@@ -8,6 +8,7 @@
 void testMapa(){
 	std::map<int, std::string> mapa = {{121, "Jorge"}, {223, "Sonia"}, {445, "Ana"}, {11, "Julian"}};
 	std::map<int, std::string>::iterator it;
+	std::map<int, std::string>::reverse_iterator it2;
 	
 	mapa.at(223) = "Sonia Sanz";
 	mapa[199] = "Juan";
@@ -20,8 +21,7 @@ void testMapa(){
 	
 	// Recorrido con el iterador:
 	for (it = mapa.begin(); it != mapa.end(); it++){
-		std::cout << it->first << " " << it->second << std::endl;
-		
+		std::cout << it->first << " " << it->second << std::endl;		
 	}
 	
 	// Buscar por la clave, utilizando el metodo find:
@@ -35,6 +35,13 @@ void testMapa(){
 		
 	} else {
 		std::cout << it->first << " " << it->second << std::endl;
+	}
+	
+	// iterador reverse:
+	std::cout << "It invertido: " << std::endl;
+	
+	for (it2 = mapa.rbegin() ; it2 != mapa.rend(); it2++){
+			std::cout << it2->first << " " << it2->second << std::endl;
 	}
 	
 }
