@@ -57,6 +57,8 @@ void testMatriz(){
 	m1.print();	
 	std::cout << std::endl;
 	m2.print();
+	
+	std::cout << std::endl << m2.to_string() << std::endl;
 }
 
 void testConversiones(){
@@ -76,8 +78,8 @@ int main(){
 	std::srand(std::time(nullptr));
 	
 	//testMapa();
-	//testMatriz();
-	testConversiones();
+	testMatriz();
+	//testConversiones();
 	return 0;
 }
 

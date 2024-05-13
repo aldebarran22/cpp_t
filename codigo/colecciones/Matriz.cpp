@@ -1,8 +1,9 @@
-#include "Matriz.h"
-
 #include <iostream>
 #include <iomanip>
 #include <cstdlib>
+
+#include "Matriz.h"
+#include "funciones.h"
 
 Matriz::Matriz(int filas, int cols)
 {
@@ -19,13 +20,22 @@ Matriz::Matriz(int filas, int cols)
 	}
 }
 
-std::string Matriz::to_string(int sep){
-	
-	for (std::vector<int> fila : this->matriz){
-		std::string fila_csv = "";
+std::string Matriz::to_string(char sep)
+{
+	std::string csv = "";
 		
-		for (int num : fila){
+	//for (std::vector<int> fila : this->matriz){
+	for (int i = 0 ; i < this->filas ; i++ ){
 			
+		csv += join(this->matriz.at(i), sep);
+		
+		// No se pone el salto de linea en la ultima fila
+		if (i < this->filas-1)
+			csv += "\n"; 
+		
+	}
+	
+	return csv;
 }
 
 void Matriz::print()
