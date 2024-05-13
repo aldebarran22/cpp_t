@@ -12,10 +12,25 @@ void testMapa(){
 	mapa.at(223) = "Sonia Sanz";
 	mapa[199] = "Juan";
 	
+	//std::make_pair
+	
 	// Recorrido con el iterador:
 	for (it = mapa.begin(); it != mapa.end(); it++){
 		std::cout << it->first << " " << it->second << std::endl;
 		
+	}
+	
+	// Buscar por la clave, utilizando el metodo find:
+	
+	int numero = 200;
+	std::cout << "Buscar: " << numero << std::endl;	
+	it = mapa.find(numero);
+	
+	if (it == mapa.end()){
+		std::cout << "No existe " << numero << std::endl;
+		
+	} else {
+		std::cout << it->first << " " << it->second << std::endl;
 	}
 	
 }
