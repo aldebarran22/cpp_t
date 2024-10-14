@@ -8,7 +8,7 @@ int main(){
 	
 	// for (inicializacion ; condicion ; incrementos)
 	
-	for (letra = 0 ; letra <= 255 ; letra++){
+	for (letra = 0 ; letra <= 255 ; ++letra){
 		printf("%03d : %c\n", letra, letra);
 		
 		if (letra == 255)

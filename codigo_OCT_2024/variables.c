@@ -19,7 +19,7 @@ int main(){
 	
 
 	numero = letra;
-	printf("numero = %d", numero);
+	printf("numero = \"%d\"", numero);
 	
 	letra = numero;
 	
