@@ -17,8 +17,11 @@ int main(){
 	letra = 1000;
 	printf("letra: %c %d\n", letra, letra);
 	
-	
+
+	numero = letra;
 	printf("numero = %d", numero);
+	
+	letra = numero;
 	
 	return 0;
 }
