@@ -12,9 +12,15 @@ int main(){
 	for (i = 0 ; i < 3 ; i++){
 		printf("teclear importe: ");
 		scanf("%d", &importe);
-		if (importe % 10 != 0)
-			puts("Importe incorrecto, teclear un multiplo de 10");
-		else {
+		
+		if (importe % 10 != 0){
+			
+			if (i < 2)
+				puts("Importe incorrecto, teclear un multiplo de 10");
+			else
+				puts("No dispone de mas intentos");
+					
+		} else {
 			correcto = 1;
 			break;
 		}			
@@ -41,8 +47,7 @@ int main(){
 			printf("Billetes de 10: %d\n", numBilletes);
 		}
 		
-	} else {
-		puts("No dispone de mas intentos");
-	}
+	} 
+		
 	return 0;
 }
