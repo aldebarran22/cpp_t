@@ -6,11 +6,13 @@
 int main(){
 	int importe;
 	int i;
-	int correcto = 0;
+	int correcto;
 	int numBilletes;
 	
 	while (1){
 	
+		correcto = 0;
+		
 		for (i = 0 ; i < 3 ; i++){
 			printf("teclear importe: ");
 			scanf("%d", &importe);
