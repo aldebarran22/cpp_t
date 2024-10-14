@@ -11,9 +11,9 @@ int main(){
 	for (letra = 0 ; letra <= 255 ; letra++){
 		printf("%03d : %c\n", letra, letra);
 		
-		if (letra == 255){
+		if (letra == 255)
 			break;
-		}
+		
 	}
 	
 	return 0;

@@ -9,6 +9,7 @@ int main(){
 	
 	
 	printf("int ocupa %d bytes y un char %d bytes\n", sizeof(int), sizeof(char));
+	printf("short int ocupa %d bytes y un long long %d bytes\n", sizeof(short int), sizeof(long long));
 	
 	letra++;
 	printf("letra: %c, letra: %d, en minuscula: %c\n", letra, letra, letra+32);
