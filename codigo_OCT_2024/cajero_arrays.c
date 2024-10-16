@@ -44,6 +44,9 @@ int main(){
 					importe %= billetes[i];
 					printf("Billetes de %d: %d\n", billetes[i], numBilletes);
 				}
+				
+				if (importe == 0) // Para que no pruebe con el resto de billetes
+					break;
 			}
 				
 		}
