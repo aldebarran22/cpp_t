@@ -11,6 +11,10 @@ void pasoPorPtr(int *ptr){
 	*ptr = 200;
 }
 
+void pasoPorRef(int &ptr){
+	ptr = 400;
+}
+
 
 
 int main(){
@@ -23,6 +27,8 @@ int main(){
 	pasoPorPtr(&numero);
 	printf("numero: %d\n", numero);
 	
-
+	pasoPorRef(numero);
+	printf("numero: %d\n", numero);
+	
 	return 0;
 }
