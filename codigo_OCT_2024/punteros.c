@@ -4,7 +4,7 @@
 
 int main(){
 	int numero = 100;
-	int *ptr = NULL;
+	int *ptr = NULL; // *ptr = 0;
 	
 	// Extraer la dir. de memoria de una variable
 	ptr = &numero;
