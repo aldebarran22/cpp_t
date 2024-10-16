@@ -2,9 +2,9 @@
 
 #include <stdio.h>
 
-double sumar(double n1, double n2){
-	return n1+n2;
-}
+
+// Declaración de prototipos:
+double sumar(double, double);
 
 
 int main(){
@@ -15,4 +15,10 @@ int main(){
 	printf("Resul: %g", resul);
 	
 	return 0;
+}
+
+// Implementación de la función
+
+double sumar(double n1, double n2){
+	return n1+n2;
 }
