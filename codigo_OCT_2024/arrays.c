@@ -15,7 +15,7 @@ int main(){
 	
 	n = sizeof(numeros2) / sizeof(int);
 	for (i = 0 ; i < n ; i++){
-		printf("i = %d, num = %d, dir = %p\n", i, numeros2[i], &numeros2[i] );
+		printf("i = %d, num = %d, dir = %p, dir = %p\n", i, numeros2[i], &numeros2[i],  numeros2+i);
 	}
 	
 	// En C el nombre del array es un puntero al primer elemento:
