@@ -10,10 +10,19 @@
 
 int main(int argc, char *argv[]) {
 	double num1, num2;
+	int numeros[] = {2,3,4,5,6,7,8};
+	
+	
+	printf("un puntero int * ocupa %d bytes\n", sizeof(int *));
+	printf("El array ocupa: %d bytes\n", sizeof(numeros));
+	imprimirArray(numeros, sizeof(numeros)/sizeof(int));
+		
+	//int *ptr = numeros; El nombre del array ya es un puntero al primer elemento.
 	
 	//puts(argv[0]);
 	//printf("argc: %d, argv: %s", argc, argv[0]);
-	
+
+	/*	
 	if (argc == 1){
 		printf("Dame numero1: ");
 		scanf("%lf", &num1);
@@ -32,6 +41,6 @@ int main(int argc, char *argv[]) {
 	
 	printf("suma: %lf\n", sumar(num1,num2));
 	printf("resta: %lf\n", restar(num1,num2));
-	
+	*/
 	return 0;
 }

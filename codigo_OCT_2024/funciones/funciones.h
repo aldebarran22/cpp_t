@@ -6,4 +6,6 @@
 double sumar(double, double);
 double restar(double, double);
 
+void imprimirArray(int *, int);
+
 #endif
