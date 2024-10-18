@@ -34,4 +34,11 @@ Personas:
    this (puntero al objeto que está en curso)
 
 
+CARACTERISTICAS DE C++
+- Herencia múltiple
+- Sobrecarga de operadores: relacionales y aritméticos, de flujo << >>
+
+
+
+
 
