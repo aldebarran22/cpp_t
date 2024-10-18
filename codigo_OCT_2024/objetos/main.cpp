@@ -20,6 +20,8 @@ int main(int argc, char** argv) {
 	std::cout << "p1: " << p1.to_string() << std::endl;
 	
 	p1.engordar(2.5);
+	p1.setNombre("Lucas");
+	
 	std::cout << "p1: " << p1.to_string() << std::endl;
 	std::cout << "p2: " << p2.to_string() << std::endl;
 	std::cout << "p3: " << p3.to_string() << std::endl;
