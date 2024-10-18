@@ -10,7 +10,7 @@ class Punto2D
 	public:
 		Punto2D();
 		Punto2D(int, int);
-		std::string to_string();
+		std::string to_string() const; // El método funciona para objetos constantes y no constantes
 		void desplazar(int);
 		Punto2D desplazarCopia(int);
 		~Punto2D();

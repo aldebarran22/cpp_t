@@ -29,7 +29,7 @@ Punto2D Punto2D::desplazarCopia(int valor)
 	return aux;
 }	
 	
-std::string Punto2D::to_string()
+std::string Punto2D::to_string() const
 {
 	return "[" + std::to_string(this->x) + "," + std::to_string(this->y) + "]";
 }
