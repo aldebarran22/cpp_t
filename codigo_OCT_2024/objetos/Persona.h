@@ -5,15 +5,22 @@
 
 class Persona
 {
+	private:
+	// Att. de instancia
 	// tipo   nombreAtt
 	std::string nombre;
 	float peso;
 	float altura;
 	
+	// Att. de la clase:
+	static int numPersonas;
+	
 	
 	public:
 		//Persona(); // constructor por defecto
 		Persona(std::string="", float=0.0, float=0.0);
+		
+		static int getNumPersonas();
 		
 		// Getters / Setters
 		std::string getNombre(){ return this->nombre; }

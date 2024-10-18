@@ -1,5 +1,7 @@
 #include "Persona.h"
 
+int Persona::numPersonas = 0;
+
 //Persona::Persona(){}
 
 Persona::Persona(std::string nombre, float peso, float altura)
@@ -8,6 +10,14 @@ Persona::Persona(std::string nombre, float peso, float altura)
 	this->nombre = nombre;
 	this->peso = peso;
 	this->altura = altura;	
+	
+	// Contamos una persona:
+	Persona::numPersonas++;
+}
+
+int Persona::getNumPersonas()
+{
+	return Persona::numPersonas;
 }
 
 std::string Persona::to_string()
