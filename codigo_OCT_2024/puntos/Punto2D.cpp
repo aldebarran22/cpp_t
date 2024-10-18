@@ -30,6 +30,11 @@ Punto2D Punto2D::desplazarCopia(int valor)
 	return aux;
 }
 
+Punto2D Punto2D::operator+(const Punto2D &otro)
+{
+	return Punto2D(this->x + otro.x, this->y + otro.y);
+}
+
 float Punto2D::calcularDistancia(const Punto2D &otro) const
 {
 	return std::sqrt( std::pow(this->x - otro.x, 2) + std::pow(this->y - otro.y, 2) );

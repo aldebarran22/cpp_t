@@ -6,7 +6,7 @@
 
 int main(int argc, char** argv) {
 	const Punto2D p;
-	Punto2D r;
+	Punto2D r, suma;
 	Punto2D q(-1, 7);
 	
 	std::cout << "p: " <<  p.to_string() << " q: "  << q.to_string() << std::endl;
@@ -22,7 +22,12 @@ int main(int argc, char** argv) {
 	std::cout << "Dist: " << distancia << std::endl;
 	
 	
-	//std::cout << "p: " << p << std::endl;
+	//std::cout << "p: " << p << std::endl;	
+	suma = r + q; // Se traduce a: r = p.operator+(q);
+	std::cout << "r: " <<  r.to_string() << " q: "  << q.to_string() << " suma: " << suma.to_string() << std::endl;
+	
+	
+	//if (p == q){}
 	
 	return 0;
 }

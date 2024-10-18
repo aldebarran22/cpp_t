@@ -14,6 +14,7 @@ class Punto2D
 		void desplazar(int);
 		Punto2D desplazarCopia(int);
 		float calcularDistancia(const Punto2D &) const;
+		Punto2D operator+(const Punto2D &);
 		~Punto2D();
 	protected:
 };
