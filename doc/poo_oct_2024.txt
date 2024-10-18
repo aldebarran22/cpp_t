@@ -1,0 +1,37 @@
+Personas:
+
+   Describir características físicas --> atributos
+	- nombre
+	- peso
+	- altura
+	- color pelo
+	- color ojos
+
+   tareas / acciones que realizan las personas --> métodos
+	- correr()
+	- andar()
+	- comer()
+
+
+   Una persona --> Una instancia (objeto)
+
+   clase: describir todas las características y funcionalidades
+   que realizan las personas.
+
+
+   clase (UNA) -> objetos (MUCHOS)
+
+   Instanciar (crear una persona) --> constructores inicializar objetos
+
+   Persona.h --> declaraciones
+   Persona.CPP --> implementaciones
+
+   Persona p1, p2;
+
+   p1.correr();
+   p2.correr();
+
+   this (puntero al objeto que está en curso)
+
+
+
