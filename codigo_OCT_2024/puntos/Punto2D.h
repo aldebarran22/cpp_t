@@ -11,6 +11,8 @@ class Punto2D
 		Punto2D();
 		Punto2D(int, int);
 		std::string to_string();
+		void desplazar(int);
+		Punto2D desplazarCopia(int);
 		~Punto2D();
 	protected:
 };
