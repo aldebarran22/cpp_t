@@ -12,12 +12,19 @@ Punto2D::Punto2D()
 Punto2D::Punto2D(int x2, int y2):x(x2),y(y2){}
 	
 	
+bool operator==(const Punto2D &p1, const Punto2D &p2)
+{
+	return p1.x== p2.x && p1.y == p2.y;
+}
+	
 void Punto2D::desplazar(int valor)
 {
 	// Modifica a this
 	this->x *= valor;
 	this->y *= valor;
 }
+
+
 	
 Punto2D Punto2D::desplazarCopia(int valor)
 {

@@ -5,7 +5,12 @@
 
 class Punto2D
 {
+	// Atributos
 	int x, y;
+	
+	// Funciones friend: NO existe this porque es una función externa a la clase:
+	friend bool operator==(const Punto2D &, const Punto2D &);
+	
 	
 	public:
 		Punto2D();
@@ -15,6 +20,7 @@ class Punto2D
 		Punto2D desplazarCopia(int);
 		float calcularDistancia(const Punto2D &) const;
 		Punto2D operator+(const Punto2D &);
+		//bool operator==(const Punto2D &);
 		~Punto2D();
 	protected:
 };
