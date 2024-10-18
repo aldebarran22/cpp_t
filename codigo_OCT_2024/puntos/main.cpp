@@ -18,6 +18,9 @@ int main(int argc, char** argv) {
 	
 	std::cout << "r = q.desplazarCopia(3): " <<  r.to_string() << " q: "  << q.to_string() << std::endl;
 	
+	float distancia = p.calcularDistancia(r);
+	std::cout << "Dist: " << distancia << std::endl;
+	
 	
 	//std::cout << "p: " << p << std::endl;
 	

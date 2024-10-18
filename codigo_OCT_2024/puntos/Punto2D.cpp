@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 
 #include "Punto2D.h"
 
@@ -27,7 +28,12 @@ Punto2D Punto2D::desplazarCopia(int valor)
 	
 	aux.desplazar(valor);
 	return aux;
-}	
+}
+
+float Punto2D::calcularDistancia(const Punto2D &otro) const
+{
+	return std::sqrt( std::pow(this->x - otro.x, 2) + std::pow(this->y - otro.y, 2) );
+}
 	
 std::string Punto2D::to_string() const
 {
