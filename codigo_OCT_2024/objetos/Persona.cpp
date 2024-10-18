@@ -1,8 +1,6 @@
 #include "Persona.h"
 
-Persona::Persona()
-{
-}
+//Persona::Persona(){}
 
 Persona::Persona(std::string nombre, float peso, float altura)
 {
