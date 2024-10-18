@@ -32,7 +32,7 @@ class Persona
 		void setAltura(float altura){ this->altura = altura; }		
 		
 		
-		//Persona(const Persona &);
+		Persona(const Persona &);
 		//Persona & operator=(const Persona &); 
 		void engordar(float=1.0);
 		std::string to_string();

@@ -15,6 +15,16 @@ Persona::Persona(std::string nombre, float peso, float altura)
 	Persona::numPersonas++;
 }
 
+Persona::Persona(const Persona &p)
+{
+	this->nombre = p.nombre;
+	this->peso = peso;
+	this->altura = altura;
+	
+	// Contamos una persona:
+	Persona::numPersonas++;
+}
+
 int Persona::getNumPersonas()
 {
 	return Persona::numPersonas;

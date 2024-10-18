@@ -5,11 +5,15 @@
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main(int argc, char** argv) {
+	std::cout << "Num Personas: " << Persona::getNumPersonas() << std::endl;
+	
 	Persona p1("Pedro", 77, 1.8);
 	Persona p3;
 	
 	// Uso del constructor copia:
 	Persona p2(p1);
+	
+	std::cout << "Num Personas: " << Persona::getNumPersonas() << std::endl;
 	
 	// Uso del operador = (asignación)
 	p3 = p1;
