@@ -16,6 +16,11 @@ bool operator==(const Punto2D &p1, const Punto2D &p2)
 {
 	return p1.x== p2.x && p1.y == p2.y;
 }
+
+std::ostream & operator<<(std::ostream &os, const Punto2D &p)
+{
+	return os << "(" << p.x << "," << p.y << ")" << std::endl;
+}
 	
 void Punto2D::desplazar(int valor)
 {

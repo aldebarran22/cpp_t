@@ -16,13 +16,14 @@ int main(int argc, char** argv) {
 	
 	r = q.desplazarCopia(3);
 	
-	std::cout << "r = q.desplazarCopia(3): " <<  r.to_string() << " q: "  << q.to_string() << std::endl;
+	std::cout << "r = q.desplazarCopia(3): " <<  r << " q: "  << q << std::endl;
 	
 	float distancia = p.calcularDistancia(r);
 	std::cout << "Dist: " << distancia << std::endl;
 	
 	
 	//std::cout << "p: " << p << std::endl;	
+	
 	suma = r + q; // Se traduce a: suma = r.operator+(q);
 	suma2 = r.operator+(q);
 	
