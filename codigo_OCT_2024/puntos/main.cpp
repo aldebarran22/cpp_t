@@ -36,5 +36,8 @@ int main(int argc, char** argv) {
 		std::cout << "suma es distinto a suma2" << std::endl;
 	}
 	
+	
+	std::cout << ((suma==suma2) ? "son iguales" : "son distintos") << std::endl;
+	
 	return 0;
 }
