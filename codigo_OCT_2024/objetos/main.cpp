@@ -7,7 +7,12 @@
 int main(int argc, char** argv) {
 	Persona p1("Pedro", 77, 1.8);
 	
+	p1.engordar();
+	
 	std::cout << "Pruebas clase Persona: " << std::endl;
+	std::cout << p1.to_string() << std::endl;
+	
+	p1.engordar(2.5);
 	std::cout << p1.to_string() << std::endl;
 	return 0;
 }

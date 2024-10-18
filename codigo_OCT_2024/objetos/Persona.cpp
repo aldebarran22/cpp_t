@@ -15,6 +15,10 @@ std::string Persona::to_string()
 	return this->nombre + " " + std::to_string(this->peso) + " " + std::to_string(this->altura);
 }
 
+void Persona::engordar(float kilos){
+	this->peso += kilos;
+}
+
 Persona::~Persona()
 {
 }
