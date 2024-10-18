@@ -30,7 +30,11 @@ int main(int argc, char** argv) {
 	std::cout << "suma2: " << suma2.to_string() << std::endl;
 	
 	
-	//if (p == q){}
+	if (suma == suma2){
+		std::cout << "suma es igual que suma2" << std::endl;
+	} else {
+		std::cout << "suma es distinto a suma2" << std::endl;
+	}
 	
 	return 0;
 }
