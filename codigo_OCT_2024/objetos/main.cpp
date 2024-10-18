@@ -6,9 +6,13 @@
 
 int main(int argc, char** argv) {
 	Persona p1("Pedro", 77, 1.8);
+	Persona p3;
 	
 	// Uso del constructor copia:
 	Persona p2(p1);
+	
+	// Uso del operador = (asignación)
+	p3 = p1;
 	
 	p1.engordar();
 	
@@ -18,5 +22,6 @@ int main(int argc, char** argv) {
 	p1.engordar(2.5);
 	std::cout << "p1: " << p1.to_string() << std::endl;
 	std::cout << "p2: " << p2.to_string() << std::endl;
+	std::cout << "p3: " << p3.to_string() << std::endl;
 	return 0;
 }

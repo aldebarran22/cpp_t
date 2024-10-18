@@ -14,6 +14,8 @@ class Persona
 	public:
 		//Persona(); // constructor por defecto
 		Persona(std::string="", float=0.0, float=0.0);
+		//Persona(const Persona &);
+		//Persona & operator=(const Persona &); 
 		void engordar(float=1.0);
 		std::string to_string();
 		~Persona();
