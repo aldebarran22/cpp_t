@@ -22,6 +22,11 @@ int main(){
 		std::cout << "size: " << numeros2.size() << " capacity: " << numeros2.capacity() << std::endl;
 		numeros2.push_back(i);
 	}
+	
+	// Formas de recorrer un vector:
+	for (int i = 0 ; i < nombres.size() ; i++){
+		std::cout << nombres[i] << " " << nombres.at(i) << std::endl;
+	}
 		
 	return 0;	
 }
