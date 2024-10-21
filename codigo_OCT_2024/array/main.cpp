@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 
 #include "Vector.h"
 
@@ -27,6 +28,20 @@ int main(int argc, char** argv) {
 	p2[0] = 1000;
 	
 	v1.print();
+	
+	//////////////////////////////////////////
+	// prueba con la clase string de C++: Modificar un char de un string desde un puntero
+	std::string nombre = "Ana Sanz";
+	const char *ptr;
+	char *cad;
+	
+	ptr = nombre.c_str();
+	cad = const_cast<char *>(ptr);	
+	cad[0] = 'a';
+	
+	std::cout << "nombre: " << nombre << std::endl;
+	
+	
 	
 	
 	return 0;
