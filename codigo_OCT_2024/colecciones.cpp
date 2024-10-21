@@ -7,6 +7,7 @@
 
 
 int main(){
+	int pos;
 	std::vector<std::vector<int>> matriz;
 	
 	std::vector<int> numeros2(5);
@@ -65,7 +66,11 @@ int main(){
 		std::cout << "No existe " << buscar << std::endl;
 		
 	} else {
-		std::cout << "Existe " << *itcad << " posicion: " << itcad - nombres.begin() << std::endl;
+		// Existe -> borramos el nombre
+		pos = itcad - nombres.begin();
+		std::cout << "Existe " << *itcad << " posicion: " << pos << std::endl;
+		nombres.erase(nombres.begin()+pos);
+		std::cout << "Tenemos " << nombres.size() << " nombres" << std::endl;
 	}
 	
 	//std::cout << nombres[20] << std::endl;
