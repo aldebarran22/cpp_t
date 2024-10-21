@@ -31,6 +31,16 @@ int main(){
 	for (std::string nombre : nombres ){
 		std::cout << nombre << std::endl;
 	}
+	std::cout << std::endl;
+	
+	for (int &valor : numeros){
+		valor *= 10;
+	}
+	
+	for (int valor : numeros){
+		std::cout << valor << " ";
+	}
+	std::cout << std::endl;
 	
 	//std::cout << nombres[20] << std::endl;
 	//std::cout << nombres.at(20) << std::endl;
