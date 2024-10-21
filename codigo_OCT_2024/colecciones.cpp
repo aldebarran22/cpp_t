@@ -27,6 +27,13 @@ int main(){
 	for (int i = 0 ; i < nombres.size() ; i++){
 		std::cout << nombres[i] << " " << nombres.at(i) << std::endl;
 	}
+	
+	for (std::string nombre : nombres ){
+		std::cout << nombre << std::endl;
+	}
+	
+	//std::cout << nombres[20] << std::endl;
+	//std::cout << nombres.at(20) << std::endl;
 		
 	return 0;	
 }
