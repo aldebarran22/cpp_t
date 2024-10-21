@@ -11,6 +11,9 @@ int main(){
 	std::vector<int> numeros2(5);
 	
 	std::vector<int> numeros = {1,2,3,4,5};
+	std::vector<int>::iterator it;
+	std::vector<int>::reverse_iterator it2;
+	
 	std::vector<std::string> nombres = {"Pedro", "Miguel","Sofia","Ana"};
 	
 	// Añadir elementos al vector:
@@ -39,6 +42,11 @@ int main(){
 	
 	for (int valor : numeros){
 		std::cout << valor << " ";
+	}
+	std::cout << std::endl;
+	
+	for (it = numeros.begin() ; it != numeros.end(); it++){
+		std::cout << *it << " ";
 	}
 	std::cout << std::endl;
 	
