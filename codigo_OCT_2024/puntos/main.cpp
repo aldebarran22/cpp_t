@@ -1,14 +1,21 @@
 #include <iostream>
+#include <string>
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 #include "Punto2D.h"
 
 int main(int argc, char** argv) {
+	std::string texto;
 	int escalar, escalar2;
 	const Punto2D p;
 	Punto2D r, suma, suma2;
 	Punto2D q(-1, 7);
+	
+	std::cout << "Teclear texto: ";
+	//std::cin >> texto; // OJO solo leer una palabra, si ponemos espacios corta la lectura.
+	std::getline(std::cin, texto);
+	std::cout << "Texto tecleado: " << texto << std::endl;
 	
 	std::cout << "p: " <<  p.to_string() << " q: "  << q.to_string() << std::endl;
 	
