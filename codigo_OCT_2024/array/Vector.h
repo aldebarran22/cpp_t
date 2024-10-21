@@ -9,6 +9,8 @@ class Vector
 	
 	public:
 		Vector(int=10);
+		Vector(const Vector &)=delete;
+		Vector & operator=(const Vector &)=delete;
 		bool push(int);
 		int length(){ return this->pos; } 
 		int capacity(){ return this->n; }
