@@ -1,0 +1,29 @@
+Definición de punteros:
+tipo *
+int * 	  -> puntero a int
+Punto2D * -> puntero a punto2d.
+
+Los punteros en C++ se pueden inicializar a 0 o nullptr;
+
+Crear un objeto dinamicamente a partir del puntero:
+Punto2D *p = new Punto2D(7,4);
+delete p;
+p = nullptr;
+
+Crear un array con new:
+int *numeros = new int[10];
+delete [] numeros;
+numeros = nullptr;
+
+Punto2D *puntos = new Punto2D[10];
+
+
+Operadores de punteros:
+& -> extraer dir. de memoria de una variable u objeto
+* -> Acceder a la variable através del puntero.
+
+new -> reservar memoria para un objeto
+new [] -> reservar memoria para un array
+
+delete -> liberar la memoria de un objeto
+delete [] -> liberar la memoria de un array
