@@ -18,7 +18,9 @@ Vector::Vector(const Vector &v)
 	this->ptr = new int[v.n];
 	
 	// Copiar los datos del puntero ptr de v a this:
-	std::copy(this->ptr, v.ptr, v.ptr+v.pos);
+	
+	// Inicio (puntero origen), fin (puntero origen + nro elementos, puntero destino).
+	std::copy(v.ptr, v.ptr+v.pos, this->ptr);
 	
 	// Copiar el resto de atributos
 	this->n = v.n;
