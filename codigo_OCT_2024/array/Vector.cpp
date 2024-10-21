@@ -31,14 +31,22 @@ Vector::Vector(const Vector &v)
 Vector & Vector::operator=(const Vector &v)
 {
 	// liberar la memoria ocupada (en this)
+	delete [] this->ptr;
 	
 	// Reservar el mismo tamaño que tenga v
+	this->ptr = new int[v.n];
 	
-	// Copiar los datos del puntero ptr
+	// Copiar los datos del puntero ptr de v a this:
+	
+	// Inicio (puntero origen), fin (puntero origen + nro elementos, puntero destino).
+	std::copy(v.ptr, v.ptr+v.pos, this->ptr);
 	
 	// Copiar el resto de atributos
+	this->n = v.n;
+	this->pos = v.pos;
 	
 	// Devolver una ref a this
+	return *this;
 	
 }
 
