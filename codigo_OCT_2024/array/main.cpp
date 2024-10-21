@@ -7,6 +7,8 @@
 int main(int argc, char** argv) {
 	Vector v1(15);
 	Vector v3;
+	const int *p;
+	int *p2;
 	
 	v1.push(34);
 	v1.push(44);
@@ -19,6 +21,12 @@ int main(int argc, char** argv) {
 	v1.print();
 	v2.print();
 	v3.print();
+	
+	p = v1.getPtr();
+	p2 = const_cast<int *>(p);  // const_cast<tipo_destino>(variable_origen) --> ANULA EL EFECTO DE CONST.
+	p2[0] = 1000;
+	
+	v1.print();
 	
 	
 	return 0;
