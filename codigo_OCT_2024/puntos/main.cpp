@@ -12,6 +12,11 @@ int main(int argc, char** argv) {
 	
 	std::cout << "p: " <<  p.to_string() << " q: "  << q.to_string() << std::endl;
 	
+	std::cout << "Teclear X e Y para un punto2D: ";
+	std::cin >> r;
+	std::cout << "El punto r es: " << r << std::endl;
+	
+	
 	std::cout << "Teclear dos numeros enteros: ";
 	std::cin >> escalar >> escalar2;
 	q.desplazar(escalar);

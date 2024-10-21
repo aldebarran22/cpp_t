@@ -21,6 +21,11 @@ std::ostream & operator<<(std::ostream &os, const Punto2D &p)
 {
 	return os << "(" << p.x << "," << p.y << ")" << std::endl;
 }
+
+std::istream & operator>>(std::istream &is, Punto2D &p)
+{
+	return is >> p.x >> p.y;
+}
 	
 void Punto2D::desplazar(int valor)
 {
