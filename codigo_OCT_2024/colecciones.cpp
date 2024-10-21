@@ -50,6 +50,11 @@ int main(){
 	}
 	std::cout << std::endl;
 	
+	for (it2 = numeros.rbegin() ; it2 != numeros.rend(); it2++){
+		std::cout << *it2 << " ";
+	}
+	std::cout << std::endl;
+	
 	//std::cout << nombres[20] << std::endl;
 	//std::cout << nombres.at(20) << std::endl;
 		
