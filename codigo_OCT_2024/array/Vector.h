@@ -9,8 +9,14 @@ class Vector
 	
 	public:
 		Vector(int=10);
-		Vector(const Vector &)=delete;
-		Vector & operator=(const Vector &)=delete;
+		
+		// Si no queremos utilizar el const. copia y operador = (lo borramos)
+		//Vector(const Vector &)=delete;
+		//Vector & operator=(const Vector &)=delete;
+		
+		Vector(const Vector &);
+		Vector & operator=(const Vector &);
+		
 		bool push(int);
 		int length(){ return this->pos; } 
 		int capacity(){ return this->n; }

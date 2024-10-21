@@ -1,4 +1,5 @@
 #include <iostream>
+#include <algorithm>
 
 #include "Vector.h"
 
@@ -7,6 +8,36 @@ Vector::Vector(int n)
 	this->n = n;
 	this->pos = 0; // primera casilla libre, la primera.
 	this->ptr = new int[n];	
+	
+	std::cout << "Dir. de memoria: " << this->ptr << std::endl;
+}
+
+Vector::Vector(const Vector &v)
+{
+	// Reservar el mismo tamaño que tenga v
+	this->ptr = new int[v.n];
+	
+	// Copiar los datos del puntero ptr de v a this:
+	std::copy(this->ptr, v.ptr, v.ptr+v.pos);
+	
+	// Copiar el resto de atributos
+	this->n = v.n;
+	this->pos = v.pos;
+	
+}
+	
+Vector & Vector::operator=(const Vector &v)
+{
+	// liberar la memoria ocupada (en this)
+	
+	// Reservar el mismo tamaño que tenga v
+	
+	// Copiar los datos del puntero ptr
+	
+	// Copiar el resto de atributos
+	
+	// Devolver una ref a this
+	
 }
 
 bool Vector::push(int item)
