@@ -5,18 +5,21 @@
 #include "Punto2D.h"
 
 int main(int argc, char** argv) {
+	int escalar, escalar2;
 	const Punto2D p;
 	Punto2D r, suma, suma2;
 	Punto2D q(-1, 7);
 	
 	std::cout << "p: " <<  p.to_string() << " q: "  << q.to_string() << std::endl;
 	
-	q.desplazar(2);
-	std::cout << "p: " <<  p.to_string() << " q.desplazar(2): "  << q.to_string() << std::endl;
+	std::cout << "Teclear dos numeros enteros: ";
+	std::cin >> escalar >> escalar2;
+	q.desplazar(escalar);
+	std::cout << "p: " <<  p.to_string() << " q.desplazar(" << escalar << ") "  << q.to_string() << std::endl;
 	
-	r = q.desplazarCopia(3);
+	r = q.desplazarCopia(escalar2);
 	
-	std::cout << "r = q.desplazarCopia(3): " <<  r << " q: "  << q << std::endl;
+	std::cout << "r = q.desplazarCopia(" << escalar2 << ") " <<  r << " q: "  << q << std::endl;
 	
 	float distancia = p.calcularDistancia(r);
 	std::cout << "Dist: " << distancia << std::endl;
