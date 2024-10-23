@@ -6,6 +6,11 @@
 #ifndef _JEFEPROYECTO_H
 #define _JEFEPROYECTO_H
 
+#include <string>
+#include <vector>
+
+using namespace std;
+
 #include "Empleado.h"
 
 
@@ -19,9 +24,10 @@ public:
  * @param empresa
  * @param sueldo
  */
-void JefeProyecto(string nombre, float peso, float altura, string empresa, float sueldo);
-    
+JefeProyecto(string nombre, float peso, float altura, string empresa, float sueldo);
+void añadirEmpleado(Empleado);
 string to_string();
+
 protected: 
     vector<Empleado> programadores;
 };

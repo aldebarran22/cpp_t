@@ -18,13 +18,13 @@
  * @param sueldo
  * @param jefe
  */
-void Administrativo::Administrativo(string nombre, float peso, float altura, string empresa, float sueldo, Empleado jefe) {
-
+Administrativo::Administrativo(string nombre, float peso, float altura, string empresa, float sueldo, Empleado jefe)
+					:Empleado(nombre, peso, altura, empresa, sueldo), jefe(jefe) {
 }
 
 /**
  * @return string
  */
 string Administrativo::to_string() {
-    return "";
+    return Empleado::to_string() + " JEFE: " + this->jefe.nombre;
 }

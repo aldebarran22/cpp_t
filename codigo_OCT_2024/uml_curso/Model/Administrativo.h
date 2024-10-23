@@ -6,6 +6,9 @@
 #ifndef _ADMINISTRATIVO_H
 #define _ADMINISTRATIVO_H
 
+#include <string>
+using namespace std;
+
 #include "Empleado.h"
 
 
@@ -20,9 +23,10 @@ public:
  * @param sueldo
  * @param jefe
  */
-void Administrativo(string nombre, float peso, float altura, string empresa, float sueldo, Empleado jefe);
+Administrativo(string nombre, float peso, float altura, string empresa, float sueldo, Empleado jefe);
     
 string to_string();
+
 protected: 
     Empleado jefe;
 };

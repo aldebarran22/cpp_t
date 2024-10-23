@@ -6,6 +6,9 @@
 #ifndef _EMPLEADO_H
 #define _EMPLEADO_H
 
+#include <string>
+using namespace std;
+
 #include "Persona.h"
 
 
@@ -19,7 +22,7 @@ public:
  * @param empresa
  * @param sueldo
  */
-void Empleado(string nombre, float peso, float altura, string empresa, float sueldo);
+Empleado(string nombre, float peso, float altura, string empresa, float sueldo);
     
 string to_string();
 protected: 
