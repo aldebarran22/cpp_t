@@ -19,7 +19,7 @@ public:
  */
 Persona(string nombre, float peso, float altura);
     
-string to_string();
+virtual string to_string();
 protected: 
     string nombre;
     float peso;

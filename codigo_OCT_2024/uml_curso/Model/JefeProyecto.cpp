@@ -21,7 +21,7 @@ JefeProyecto::JefeProyecto(string nombre, float peso, float altura, string empre
 
 }
 
-void JefeProyecto::addEmpleado(Empleado emp){
+void JefeProyecto::addEmpleado(Empleado *emp){
 	this->programadores.push_back(emp);
 }
 
@@ -31,9 +31,18 @@ void JefeProyecto::addEmpleado(Empleado emp){
 string JefeProyecto::to_string() {
 	string resul = "";
 	
-	for (Empleado e : this->programadores){
-		resul += e.to_string()+"\n";
+	for (Empleado *e : this->programadores){
+		resul += e->to_string()+"\n";
 	}
 	
     return Empleado::to_string() +  "\n" + resul;
 }
+
+JefeProyecto::~JefeProyecto()
+{
+	for (Empleado *e : this->programadores){
+		delete e;
+		e = nullptr;
+	}
+}
+

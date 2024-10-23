@@ -9,12 +9,12 @@ using namespace std;
 
 int main(int argc, char** argv) {
 	
-	Empleado prog1("Programador1", 70.0, 1.77, "CAS", 1800.0);
-	Empleado prog2("Programador2", 76.0, 1.87, "CAS", 1800.0);
-	Empleado prog3("Programador3", 79.0, 1.68, "CAS", 1800.0);
+	Empleado *prog1 = new Empleado("Programador1", 70.0, 1.77, "CAS", 1800.0);
+	Empleado *prog2 = new Empleado("Programador2", 76.0, 1.87, "CAS", 1800.0);
+	Empleado *prog3 = new Empleado("Programador3", 79.0, 1.68, "CAS", 1800.0);
 	
 	Empleado jefe("Jefe", 90.0, 1.77, "CAS", 2300.0);
-	Administrativo adm("administrativo", 80.0, 1.8, "CAS", 1500.0, jefe);
+	Empleado *adm = new Administrativo("administrativo", 80.0, 1.8, "CAS", 1500.0, jefe);
 	
 	JefeProyecto jp("Jefe de proyecto", 99.0, 1.9, "CAS",4500.0);
 	jp.addEmpleado(prog1);

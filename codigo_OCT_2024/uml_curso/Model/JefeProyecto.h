@@ -25,11 +25,12 @@ public:
  * @param sueldo
  */
 JefeProyecto(string nombre, float peso, float altura, string empresa, float sueldo);
-void addEmpleado(Empleado);
+void addEmpleado(Empleado *);
 string to_string();
+~JefeProyecto();
 
 protected: 
-    vector<Empleado> programadores;
+    vector<Empleado *> programadores;
 };
 
 #endif //_JEFEPROYECTO_H
