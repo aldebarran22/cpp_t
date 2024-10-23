@@ -25,7 +25,7 @@ public:
  * @param sueldo
  */
 JefeProyecto(string nombre, float peso, float altura, string empresa, float sueldo);
-void añadirEmpleado(Empleado);
+void addEmpleado(Empleado);
 string to_string();
 
 protected: 

@@ -21,7 +21,7 @@ JefeProyecto::JefeProyecto(string nombre, float peso, float altura, string empre
 
 }
 
-void añadirEmpleado(Empleado emp){
+void JefeProyecto::addEmpleado(Empleado emp){
 	this->programadores.push_back(emp);
 }
 

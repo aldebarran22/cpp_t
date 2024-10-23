@@ -25,5 +25,5 @@ Empleado::Empleado(string nombre, float peso, float altura, string empresa, floa
  * @return string
  */
 string Empleado::to_string() {
-    return Persona::to_string() + " " + this->empresa + " " + to_string(this->sueldo);
+    return Persona::to_string() + " " + this->empresa + " " + std::to_string(this->sueldo);
 }

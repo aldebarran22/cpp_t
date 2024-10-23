@@ -26,5 +26,5 @@ Administrativo::Administrativo(string nombre, float peso, float altura, string e
  * @return string
  */
 string Administrativo::to_string() {
-    return Empleado::to_string() + " JEFE: " + this->jefe.nombre;
+    return Empleado::to_string() + " JEFE: " + this->jefe.to_string();
 }

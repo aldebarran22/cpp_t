@@ -25,5 +25,5 @@ Persona::Persona(string nombre, float peso, float altura) {
  * @return string
  */
 string Persona::to_string() {
-    return this->nombre + " " + to_string(this->peso) + " " + to_string(this->altura);
+    return this->nombre + " " + std::to_string(this->peso) + " " + std::to_string(this->altura);
 }
