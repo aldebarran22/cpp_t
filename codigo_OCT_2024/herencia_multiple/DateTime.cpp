@@ -5,6 +5,7 @@ DateTime::DateTime(int dia, int mes, int anyo, int hora, int minutos, int segund
 
 string DateTime::toString() const 
 {
+	int aux = Time::getHH();
 	return Date::toString() + " " + Time::toString();
 }
 

@@ -7,5 +7,6 @@
 int main(int argc, char** argv) {
 	DateTime dt(23,10,2024, 20,49, 24);
 	std::cout << "DT: " << dt.toString() << std::endl;
+	//std::cout << "Horas: "<< dt.getHH() << std::endl;
 	return 0;
 }
