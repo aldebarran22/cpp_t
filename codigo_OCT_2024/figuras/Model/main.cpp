@@ -12,6 +12,33 @@
 #include "Cilindro.h"
 
 
+typedef enum fig {TRIANGULO, CUADRADO, CUBO, CILINDRO} TFigura;
+
+
+void pintarFigura(Figura *f){
+	f->visualizar();
+}
+
+Figura *crearFigura(TFigura tipo){
+	
+	switch(tipo){
+		case CUADRADO:
+			return new Cuadrado(10.0);
+			
+		case TRIANGULO:
+			return new Triangulo(4.6, 7.0);
+			
+		case CUBO:
+			return new Cubo(5.0);
+			
+		case CILINDRO:
+			return new Cilindro(5.6, 2.0);
+	}
+	
+	return nullptr;
+}
+
+
 int main(int argc, char** argv) {
 	Figura *f;
 	Figura *array[4];
@@ -20,13 +47,13 @@ int main(int argc, char** argv) {
 	Figura2D *f2d = static_cast<Figura2D *>(f);
 	std::cout << "Area: " <<  f2d->area() << std::endl;
 	
-	array[0] = new Cuadrado(10.0);
-	array[1] = new Triangulo(4.6, 7.0);
-	array[2] = new Cubo(5.0);
-	array[3] = new Cilindro(5.6, 2.0);
+	array[0] = crearFigura(CUADRADO); 
+	array[1] = crearFigura(TRIANGULO);
+	array[2] = crearFigura(CUBO);
+	array[3] = crearFigura(CILINDRO);
 	
 	for (int i = 0 ; i < 4 ; i++){
-		array[i]->visualizar();
+		pintarFigura(array[i]);
 		
 		delete array[i];
 		array[i] = nullptr;
