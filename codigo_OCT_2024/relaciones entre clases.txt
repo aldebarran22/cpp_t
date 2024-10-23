@@ -1,0 +1,18 @@
+Relaciones entre clases:
+
+- Herencia: Cuando tengamos clases que tienen cosas en común.
+  Ejemplo: los perfiles de empleados
+  - Simple: Heredamos de una sola clase
+  - Múltiple: De varias clases
+
+  Empleado: Clase Padre, Superclase, ...
+     JefeProyecto
+     Administrativo
+
+
+
+
+- Composición
+
+
+- Asociación
