@@ -17,13 +17,23 @@
  * @param empresa
  * @param sueldo
  */
-void JefeProyecto::JefeProyecto(string nombre, float peso, float altura, string empresa, float sueldo) {
+JefeProyecto::JefeProyecto(string nombre, float peso, float altura, string empresa, float sueldo):Empleado(nombre,peso,altura,empresa,sueldo) {
 
+}
+
+void añadirEmpleado(Empleado emp){
+	this->programadores.push_back(emp);
 }
 
 /**
  * @return string
  */
 string JefeProyecto::to_string() {
-    return "";
+	string resul = "";
+	
+	for (Empleado e : this->programadores){
+		resul += e.to_string()+"\n";
+	}
+	
+    return Empleado::to_string() +  "\n" + resul;
 }
