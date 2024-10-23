@@ -1,0 +1,4 @@
+class Coche {}
+class CocheElectrico : public virtual Coche {}
+class CocheGasolina : public virtual Coche {}
+class CocheHibrido : public CocheElectrico, public CocheGalina {}
