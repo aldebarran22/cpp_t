@@ -21,7 +21,7 @@ Date::Date(int d, int m, int a) {
 
 string Date::toString() const {
 	char s[50];
-	string fecha;
+	string fecha;  // 23/10/2024
 
 	sprintf(s, "%02d/%02d/%04d", dd, mm, aa);  // 05/01/2025  
 	fecha = s;
